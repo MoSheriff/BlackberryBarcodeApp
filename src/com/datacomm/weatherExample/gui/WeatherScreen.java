@@ -1,8 +1,5 @@
 package com.datacomm.weatherExample.gui;
 
-import com.datacomm.weatherExample.stubs.WeatherForecastSoap_Stub;
-import com.datacomm.weatherExample.stubs.WeatherForecasts;
-
 import mypackage.MyApp;
 import net.rim.device.api.ui.MenuItem;
 import net.rim.device.api.ui.component.Dialog;
@@ -11,6 +8,9 @@ import net.rim.device.api.ui.component.LabelField;
 import net.rim.device.api.ui.component.Menu;
 import net.rim.device.api.ui.component.RichTextField;
 import net.rim.device.api.ui.container.MainScreen;
+
+import com.datacomm.weatherExample.stubs.WeatherForecastSoap_Stub;
+import com.datacomm.weatherExample.stubs.WeatherForecasts;
 
 /**
  * A class extending the MainScreen class, which provides default standard
