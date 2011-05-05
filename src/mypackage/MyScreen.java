@@ -2,21 +2,24 @@ package mypackage;
 
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.FieldChangeListener;
+import net.rim.device.api.ui.MenuItem;
 import net.rim.device.api.ui.UiApplication;
 import net.rim.device.api.ui.component.ButtonField;
 import net.rim.device.api.ui.component.Dialog;
 import net.rim.device.api.ui.component.LabelField;
+import net.rim.device.api.ui.component.Menu;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.container.VerticalFieldManager;
+import com.datacomm.weatherExample.gui.WeatherScreen;
 
 /**
  * A class extending the MainScreen class, which provides default standard
  * behavior for BlackBerry GUI applications.
  */
 public final class MyScreen extends MainScreen {
-	private static MyApp app;
+	private MyApp app;
 	public MyScreen(MyApp application) {
-		super();
+		super(DEFAULT_MENU | DEFAULT_CLOSE);
 		app = application;
 
 		LabelField title = new LabelField("Barcode Scanner",
@@ -82,4 +85,16 @@ public final class MyScreen extends MainScreen {
 	public boolean onSavePrompt() {
 	    return true;
 	}
+	
+	
+	public void makeMenu(Menu menu, int instance) {
+		menu.add(WeatherExample);
+	}
+	
+    public MenuItem WeatherExample = new MenuItem("Weather Example",100, 1) {
+		public void run() {
+			//MyApp.app.popScreen(getScreen());
+			MyApp.app.pushScreen(new WeatherScreen(app));
+		}
+	};  
 }

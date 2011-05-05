@@ -29,7 +29,7 @@ public final class WeatherScreen extends MainScreen
     public WeatherScreen(MyApp application)
     {   
     	super(DEFAULT_MENU | DEFAULT_CLOSE);
-    	this.app = application;
+    	app = application;
     	
     	setTitle(new LabelField("Contacting a weather service", LabelField.ELLIPSIS | LabelField.USE_ALL_WIDTH));
     	field = new RichTextField("");
@@ -37,9 +37,6 @@ public final class WeatherScreen extends MainScreen
     	add(editSearch = new EditField(EditField.FILTER_DEFAULT));
     	add(searchString);
     	add(field);
-    	
-    	
-    	
     }
     
 	public void makeMenu(Menu menu, int instance) {
