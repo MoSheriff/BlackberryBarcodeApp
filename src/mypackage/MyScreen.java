@@ -14,9 +14,10 @@ import net.rim.device.api.ui.container.VerticalFieldManager;
  * behavior for BlackBerry GUI applications.
  */
 public final class MyScreen extends MainScreen {
-
-	public MyScreen() {
+	private static MyApp app;
+	public MyScreen(MyApp application) {
 		super();
+		app = application;
 
 		LabelField title = new LabelField("Barcode Scanner",
 				LabelField.ELLIPSIS | LabelField.USE_ALL_WIDTH);

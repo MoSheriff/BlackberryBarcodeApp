@@ -51,7 +51,7 @@ public class MyApp extends UiApplication {
 	 */
 	public MyApp() {
 		Player player;
-		MyScreen screen = new MyScreen();
+		MyScreen screen = new MyScreen(app);
 		pushScreen(screen);
 		try {
 			player = Manager.createPlayer("capture://video");
