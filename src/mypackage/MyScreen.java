@@ -60,6 +60,7 @@ public final class MyScreen extends MainScreen {
 			switch (field.getIndex()) {
 			case 0: // camera
 				MyApp.app.pushScreen(MyApp.cScreen);
+				MyApp.cScreen.startThread();
 				break;
 
 			case 1: // history
