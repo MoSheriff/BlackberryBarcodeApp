@@ -17,10 +17,9 @@ import com.datacomm.weatherExample.gui.WeatherScreen;
  * behavior for BlackBerry GUI applications.
  */
 public final class MyScreen extends MainScreen {
-	private MyApp app;
-	public MyScreen(MyApp application) {
+	private static MyApp app;
+	public MyScreen() {
 		super(DEFAULT_MENU | DEFAULT_CLOSE);
-		app = application;
 
 		LabelField title = new LabelField("Barcode Scanner",
 				LabelField.ELLIPSIS | LabelField.USE_ALL_WIDTH);
@@ -63,6 +62,7 @@ public final class MyScreen extends MainScreen {
 		public void fieldChanged(Field field, int context) {
 			switch (field.getIndex()) {
 			case 0: // camera
+				MyApp.cScreen = new CameraScreen();
 				MyApp.app.pushScreen(MyApp.cScreen);
 				break;
 

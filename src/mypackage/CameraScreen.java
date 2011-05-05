@@ -18,6 +18,7 @@ public final class CameraScreen extends MainScreen {
 	 */
 	public CameraScreen() {
 		MyApp.imgTkr = new imageTaker();
+		MyApp.imgTkr.run();
 	}
 
 	final class imageTaker implements Runnable {
