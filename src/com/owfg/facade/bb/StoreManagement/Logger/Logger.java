@@ -1,6 +1,7 @@
 package com.owfg.facade.bb.StoreManagement.Logger;
 
-import mypackage.MyApp;
+import com.owfg.facade.bb.StoreManagement.app.MyApp;
+
 import net.rim.device.api.system.EventLogger;
 
 public class Logger {

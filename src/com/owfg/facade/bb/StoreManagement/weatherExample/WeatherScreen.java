@@ -1,9 +1,9 @@
 package com.owfg.facade.bb.StoreManagement.weatherExample;
 
+import com.owfg.facade.bb.StoreManagement.app.MyApp;
 import com.owfg.facade.bb.StoreManagement.stub.WeatherForecastSoap_Stub;
 import com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts;
 
-import mypackage.MyApp;
 import net.rim.device.api.ui.MenuItem;
 import net.rim.device.api.ui.component.Dialog;
 import net.rim.device.api.ui.component.EditField;
