@@ -1,6 +1,7 @@
 package com.owfg.facade.bb.StoreManagement.app;
 
 import net.rim.device.api.system.Bitmap;
+import net.rim.device.api.system.Characters;
 import net.rim.device.api.system.Display;
 
 import com.google.zxing.BinaryBitmap;
@@ -30,7 +31,8 @@ public class ScreenshotThread implements Runnable {
 		}
 		if (result != null) {
 			String resultText = result.getText();
-			MyApp.app.popScreen(MyApp.app.getActiveScreen());
+			//MyApp.app.popScreen(MyApp.app.getActiveScreen());
+			MyApp.keyDownUp(Characters.ESCAPE);
 			return;
 		} else {
 			return;

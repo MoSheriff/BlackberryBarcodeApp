@@ -8,10 +8,10 @@ public final class CameraScreen extends MainScreen {
 	CameraThread cThread;
 
 	public CameraScreen() {
-		cThread = new CameraThread();
 	}
 	
 	public void startThread() {
+		cThread = new CameraThread();
 		cThread.start();
 	}
 	
@@ -23,11 +23,13 @@ public final class CameraScreen extends MainScreen {
 		public void run() {
 			imgTkr = new ScreenshotThread();
 			try {
-				sleep(3000);
+				sleep(500);
 			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			imgTkr.run();
+			return;
 		}
 	}
 }

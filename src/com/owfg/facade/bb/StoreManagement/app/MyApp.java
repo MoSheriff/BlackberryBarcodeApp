@@ -72,7 +72,7 @@ public class MyApp extends UiApplication {
 	/**
 	 * Simulates a single keypress (push and release)
 	 */
-	private static void keyDownUp(char character) {
+	static void keyDownUp(char character) {
 		EventInjector.invokeEvent(new EventInjector.KeyEvent(
 				EventInjector.KeyEvent.KEY_DOWN, character, 0));
 		EventInjector.invokeEvent(new EventInjector.KeyEvent(
