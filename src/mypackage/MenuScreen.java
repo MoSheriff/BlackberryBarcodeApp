@@ -13,9 +13,9 @@ import net.rim.device.api.ui.container.VerticalFieldManager;
  * A class extending the MainScreen class, which provides default standard
  * behavior for BlackBerry GUI applications.
  */
-public final class MyScreen extends MainScreen {
+public final class MenuScreen extends MainScreen {
 
-	public MyScreen() {
+	public MenuScreen() {
 		super();
 
 		LabelField title = new LabelField("Barcode Scanner",
