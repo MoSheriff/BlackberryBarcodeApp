@@ -64,6 +64,7 @@ public final class MyScreen extends MainScreen {
 			case 0: // camera
 				MyApp.cScreen = new CameraScreen();
 				MyApp.app.pushScreen(MyApp.cScreen);
+				MyApp.cScreen.startThread();
 				break;
 
 			case 1: // history

@@ -1,49 +1,43 @@
 package mypackage;
 
-import com.google.zxing.BinaryBitmap;
-import com.google.zxing.LuminanceSource;
-import com.google.zxing.MultiFormatReader;
-import com.google.zxing.Reader;
-import com.google.zxing.ReaderException;
-import com.google.zxing.Result;
-import com.google.zxing.common.GlobalHistogramBinarizer;
-
-import net.rim.device.api.system.Bitmap;
-import net.rim.device.api.system.Display;
+//import mypackage.MyApp.imageTaker;
 import net.rim.device.api.ui.container.MainScreen;
 
+//import java.lang.Thread;
+
+
 public final class CameraScreen extends MainScreen {
-	/**
-	 * Creates a new MyScreen object
-	 */
+	CameraThread cThread;
+	//imageTaker imgTkr;
+
 	public CameraScreen() {
-		MyApp.imgTkr = new imageTaker();
+		//MyApp.imgTkr = new imageTaker();
 		//MyApp.imgTkr.run();
+		//imgTkr = MyApp.app.new imageTaker();
+		//new Thread(imgTkr).run();
+		//cThread.run();
+		cThread = new CameraThread();
 	}
-
-	final class imageTaker implements Runnable {
-
+	
+	public void startThread() {
+		//new Thread(imgTkr).run();
+		cThread.start();
+		
+	}
+	
+	class CameraThread extends Thread {	
+		Runnable imgTkr;
+		CameraThread() {
+			imgTkr = MyApp.app.new imageTaker();
+		}
+		
 		public void run() {
-			Result result;
-			Reader reader;
-			reader = new MultiFormatReader();
-			Bitmap bitmap = new Bitmap(Display.getWidth(), Display.getHeight());
-			Display.screenshot(bitmap);
-			LuminanceSource source = new CustomBitmapLuminanceSource(bitmap);
-			BinaryBitmap bitmap1 = new BinaryBitmap(
-					new GlobalHistogramBinarizer(source));
 			try {
-				result = reader.decode(bitmap1);
-			} catch (ReaderException e) {
-				return;
+				sleep(3000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
 			}
-			if (result != null) {
-				String resultText = result.getText();
-				MyApp.app.popScreen(getScreen());
-				return;
-			} else {
-				return;
-			}
+			imgTkr.run();
 		}
 	}
 }
