@@ -16,3 +16,5 @@
 *.jad
 *.rapc
 *.prefs
+*.project
+*.classpath
