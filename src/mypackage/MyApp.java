@@ -1,12 +1,19 @@
 package mypackage;
 
 import java.io.IOException;
-import java.util.Hashtable;
 
 import javax.microedition.media.Manager;
 import javax.microedition.media.MediaException;
 import javax.microedition.media.Player;
 import javax.microedition.media.control.VideoControl;
+
+import com.google.zxing.BinaryBitmap;
+import com.google.zxing.LuminanceSource;
+import com.google.zxing.Reader;
+import com.google.zxing.ReaderException;
+import com.google.zxing.Result;
+import com.google.zxing.oned.MultiFormatOneDReader;
+import com.google.zxing.common.GlobalHistogramBinarizer;
 
 import net.rim.device.api.system.Bitmap;
 import net.rim.device.api.system.Display;
@@ -14,14 +21,6 @@ import net.rim.device.api.system.EventInjector;
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.UiApplication;
 
-import com.google.zxing.BinaryBitmap;
-import com.google.zxing.LuminanceSource;
-import com.google.zxing.MultiFormatReader;
-import com.google.zxing.Reader;
-import com.google.zxing.ReaderException;
-import com.google.zxing.Result;
-import com.google.zxing.common.GlobalHistogramBinarizer;
-import com.google.zxing.oned.MultiFormatOneDReader;
 
 /**
  * This class extends the UiApplication class, providing a graphical user
