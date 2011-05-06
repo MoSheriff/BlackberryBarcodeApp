@@ -1,5 +1,7 @@
 package mypackage;
 
+import com.owfg.facade.bb.StoreManagement.weatherExample.WeatherScreen;
+
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.FieldChangeListener;
 import net.rim.device.api.ui.MenuItem;
@@ -10,7 +12,6 @@ import net.rim.device.api.ui.component.LabelField;
 import net.rim.device.api.ui.component.Menu;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.container.VerticalFieldManager;
-import com.datacomm.weatherExample.gui.WeatherScreen;
 
 /**
  * A class extending the MainScreen class, which provides default standard

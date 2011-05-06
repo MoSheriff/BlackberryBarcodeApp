@@ -18,6 +18,7 @@ import com.google.zxing.common.GlobalHistogramBinarizer;
 import net.rim.device.api.system.Bitmap;
 import net.rim.device.api.system.Display;
 import net.rim.device.api.system.EventInjector;
+import net.rim.device.api.system.EventLogger;
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.UiApplication;
 
@@ -28,11 +29,13 @@ import net.rim.device.api.ui.UiApplication;
  */
 public class MyApp extends UiApplication {
 
-	static MyApp app;
+	public static MyApp app;
 	static Field viewFinder;
 	static CameraScreen cScreen;
 	static VideoControl vc;
-
+	public static final long GUID = 0x2051fd67b72d11L;
+	public static final String APP_NAME = "OWFGScanner";
+	
 	/**
 	 * Entry point for application
 	 * 
@@ -44,6 +47,7 @@ public class MyApp extends UiApplication {
 	public static void main(String[] args) {
 		app = new MyApp();
 		app.enterEventDispatcher();
+		EventLogger.register(MyApp.GUID, MyApp.APP_NAME, EventLogger.VIEWER_STRING);
 	}
 
 	/**
