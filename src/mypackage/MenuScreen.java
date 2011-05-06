@@ -62,7 +62,6 @@ public final class MenuScreen extends MainScreen {
 		public void fieldChanged(Field field, int context) {
 			switch (field.getIndex()) {
 			case 0: // camera
-				MyApp.cScreen = new CameraScreen();
 				MyApp.app.pushScreen(MyApp.cScreen);
 				MyApp.cScreen.startThread();
 				break;
