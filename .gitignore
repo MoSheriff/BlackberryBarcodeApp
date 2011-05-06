@@ -10,4 +10,8 @@
 *.
 *.class
 [Tt]humbs.db
-
+*.alx
+*.csl
+*.cso
+*.jad
+*.rapc
