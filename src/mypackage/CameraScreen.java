@@ -9,7 +9,7 @@ import net.rim.device.api.ui.container.MainScreen;
 public final class CameraScreen extends MainScreen {
 	CameraThread cThread;
 	//imageTaker imgTkr;
-/awww snap. Built-in editor
+//awww snap. Built-in editor
 
 	public CameraScreen() {
 		//imgTkr = MyApp.app.new imageTaker();
