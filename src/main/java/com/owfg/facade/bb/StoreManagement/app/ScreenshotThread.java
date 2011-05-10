@@ -31,22 +31,24 @@ public class ScreenshotThread implements Runnable {
 		hints.put(DecodeHintType.POSSIBLE_FORMATS, readerHints);
 		reader = new MultiFormatOneDReader(hints);
 		Bitmap bitmap = new Bitmap(Display.getWidth(), Display.getHeight());
-		Display.screenshot(bitmap);
-		LuminanceSource source = new CustomBitmapLuminanceSource(bitmap);
-		BinaryBitmap bitmap1 = new BinaryBitmap(
-				new GlobalHistogramBinarizer(source));
-		try {
-			result = reader.decode(bitmap1);
-		} catch (ReaderException e) {
-			return;
-		}
-		if (result != null) {
-			String resultText = result.getText();
-			MyApp.keyDownUp(Characters.ESCAPE);
-			return;
-		} else {
-			return;
-		}
+		while(true) {
+                	Display.screenshot(bitmap);
+			LuminanceSource source = new CustomBitmapLuminanceSource(bitmap);
+			BinaryBitmap bitmap1 = new BinaryBitmap(
+					new GlobalHistogramBinarizer(source));
+			try {
+				result = reader.decode(bitmap1);
+			} catch (ReaderException e) {
+				return;
+			}
+			if (result != null) {
+				String resultText = result.getText();
+				MyApp.keyDownUp(Characters.ESCAPE);
+				return;
+			} else {
+				continue;
+			}
+                }
 	}
 
 }
