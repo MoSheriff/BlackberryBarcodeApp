@@ -73,7 +73,7 @@ public final class MenuScreen extends MainScreen {
 				break;
 
 			case 2: // help
-				MyApp.app.pushScreen(new HelpScreen());
+				MyApp.app.pushScreen(new ResultScreen());
 				break;
 
 			case 3: // quit

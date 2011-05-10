@@ -3,6 +3,8 @@ package main.java.com.owfg.facade.bb.StoreManagement.app;
 import java.util.Hashtable;
 import java.util.Vector;
 
+import javax.microedition.media.MediaException;
+
 import main.java.com.google.zxing.BarcodeFormat;
 import main.java.com.google.zxing.BinaryBitmap;
 import main.java.com.google.zxing.DecodeHintType;
@@ -12,6 +14,7 @@ import main.java.com.google.zxing.ReaderException;
 import main.java.com.google.zxing.Result;
 import main.java.com.google.zxing.common.GlobalHistogramBinarizer;
 import main.java.com.google.zxing.oned.MultiFormatOneDReader;
+import main.java.com.owfg.facade.bb.StoreManagement.gui.ResultScreen;
 import net.rim.device.api.system.Bitmap;
 import net.rim.device.api.system.Characters;
 import net.rim.device.api.system.Display;
@@ -30,8 +33,8 @@ public class ScreenshotThread implements Runnable {
 		hints.put(DecodeHintType.POSSIBLE_FORMATS, readerHints);
 		reader = new MultiFormatOneDReader(hints);
 		Bitmap bitmap = new Bitmap(Display.getWidth(), Display.getHeight());
-		while(true) {
-                	Display.screenshot(bitmap);
+		while (true) {
+			Display.screenshot(bitmap);
 			LuminanceSource source = new CustomBitmapLuminanceSource(bitmap);
 			BinaryBitmap bitmap1 = new BinaryBitmap(
 					new GlobalHistogramBinarizer(source));
@@ -42,12 +45,18 @@ public class ScreenshotThread implements Runnable {
 			}
 			if (result != null) {
 				String resultText = result.getText();
-				MyApp.keyDownUp(Characters.ESCAPE);
+				// MyApp.keyDownUp(Characters.ESCAPE);
+				try {
+					MyApp.player.stop();
+				} catch (MediaException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				return;
 			} else {
 				continue;
 			}
-                }
+		}
 	}
 
 }

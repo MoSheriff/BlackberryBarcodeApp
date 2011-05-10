@@ -1,4 +1,5 @@
 package main.java.com.owfg.facade.bb.StoreManagement.app;
+
 import java.io.IOException;
 import javax.microedition.media.Manager;
 import javax.microedition.media.MediaException;
@@ -7,6 +8,7 @@ import javax.microedition.media.control.VideoControl;
 
 import main.java.com.owfg.facade.bb.StoreManagement.gui.CameraScreen;
 import main.java.com.owfg.facade.bb.StoreManagement.gui.MenuScreen;
+import main.java.com.owfg.facade.bb.StoreManagement.gui.ResultScreen;
 
 import net.rim.device.api.system.EventInjector;
 import net.rim.device.api.system.EventLogger;
@@ -23,6 +25,7 @@ public class MyApp extends UiApplication {
 	static Field viewFinder;
 	public static CameraScreen cScreen;
 	static VideoControl vc;
+	public static Player player;
 	public static final long GUID = 0x2051fd67b72d11L;
 	public static final String APP_NAME = "OWFGScanner";
 	
@@ -44,10 +47,10 @@ public class MyApp extends UiApplication {
 	 * Creates a new MyApp object
 	 */
 	public MyApp() {
-		Player player;
-		MenuScreen screen = new MenuScreen();
+		//MenuScreen screen = new MenuScreen();
 		cScreen = new CameraScreen();
-		pushScreen(screen);
+		//pushScreen(screen);
+		
 		try {
 			player = Manager.createPlayer("capture://video");
 			player.realize();
@@ -66,6 +69,8 @@ public class MyApp extends UiApplication {
 		} catch (MediaException mee) {
 			mee.printStackTrace();
 		}
+		pushScreen(MyApp.cScreen);
+		cScreen.startThread();
 	}
 
 	/**
