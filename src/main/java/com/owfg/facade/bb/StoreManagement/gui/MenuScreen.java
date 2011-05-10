@@ -1,4 +1,4 @@
-package com.owfg.facade.bb.StoreManagement.gui;
+package main.java.com.owfg.facade.bb.StoreManagement.gui;
 
 import com.owfg.facade.bb.StoreManagement.app.MyApp;
 import com.owfg.facade.bb.StoreManagement.weatherExample.WeatherScreen;
