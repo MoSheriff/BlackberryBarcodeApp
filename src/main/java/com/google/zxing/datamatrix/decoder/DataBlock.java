@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.datamatrix.decoder;
+package main.java.com.google.zxing.datamatrix.decoder;
 
 /**
  * <p>Encapsulates a block of data within a Data Matrix Code. Data Matrix Codes may split their data into

@@ -2,11 +2,11 @@
 // Contents subject to change without notice.
 // @generated
 
-package com.owfg.facade.bb.StoreManagement.stub;
+package main.java.com.owfg.facade.bb.StoreManagement.stub;
 
 public interface WeatherForecastSoap extends java.rmi.Remote {
-	public com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getWeatherByZipCode(java.lang.String zipCode) throws java.rmi.RemoteException;
+	public main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getWeatherByZipCode(java.lang.String zipCode) throws java.rmi.RemoteException;
 
-	public com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getWeatherByPlaceName(java.lang.String placeName) throws java.rmi.RemoteException;
+	public main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getWeatherByPlaceName(java.lang.String placeName) throws java.rmi.RemoteException;
 
 }

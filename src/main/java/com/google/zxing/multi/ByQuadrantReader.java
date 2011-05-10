@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.zxing.multi;
+package main.java.com.google.zxing.multi;
 
-import com.google.zxing.BinaryBitmap;
-import com.google.zxing.ChecksumException;
-import com.google.zxing.FormatException;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.Reader;
-import com.google.zxing.Result;
+import main.java.com.google.zxing.BinaryBitmap;
+import main.java.com.google.zxing.ChecksumException;
+import main.java.com.google.zxing.FormatException;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.Reader;
+import main.java.com.google.zxing.Result;
 
 import java.util.Hashtable;
 

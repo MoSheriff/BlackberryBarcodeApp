@@ -2,24 +2,24 @@
 // Contents subject to change without notice.
 // JSR-172 Reference Implementation wscompile 1.0, using: JAX-RPC Standard Implementation (1.1, build R59)
 
-package com.owfg.facade.bb.StoreManagement.stub;
+package main.java.com.owfg.facade.bb.StoreManagement.stub;
 
 
 public class ArrayOfWeatherData {
-    protected com.owfg.facade.bb.StoreManagement.stub.WeatherData[] weatherData;
+    protected main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherData[] weatherData;
     
     public ArrayOfWeatherData() {
     }
     
-    public ArrayOfWeatherData(com.owfg.facade.bb.StoreManagement.stub.WeatherData[] weatherData) {
+    public ArrayOfWeatherData(main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherData[] weatherData) {
         this.weatherData = weatherData;
     }
     
-    public com.owfg.facade.bb.StoreManagement.stub.WeatherData[] getWeatherData() {
+    public main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherData[] getWeatherData() {
         return weatherData;
     }
     
-    public void setWeatherData(com.owfg.facade.bb.StoreManagement.stub.WeatherData[] weatherData) {
+    public void setWeatherData(main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherData[] weatherData) {
         this.weatherData = weatherData;
     }
 }

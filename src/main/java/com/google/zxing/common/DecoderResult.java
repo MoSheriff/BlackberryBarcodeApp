@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.zxing.common;
+package main.java.com.google.zxing.common;
 
-import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import main.java.com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 import java.util.Vector;
 

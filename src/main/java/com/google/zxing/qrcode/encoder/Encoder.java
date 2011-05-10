@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.encoder;
+package main.java.com.google.zxing.qrcode.encoder;
 
-import com.google.zxing.EncodeHintType;
-import com.google.zxing.WriterException;
-import com.google.zxing.common.BitArray;
-import com.google.zxing.common.CharacterSetECI;
-import com.google.zxing.common.ECI;
-import com.google.zxing.common.reedsolomon.GF256;
-import com.google.zxing.common.reedsolomon.ReedSolomonEncoder;
-import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
-import com.google.zxing.qrcode.decoder.Mode;
-import com.google.zxing.qrcode.decoder.Version;
+import main.java.com.google.zxing.EncodeHintType;
+import main.java.com.google.zxing.WriterException;
+import main.java.com.google.zxing.common.BitArray;
+import main.java.com.google.zxing.common.CharacterSetECI;
+import main.java.com.google.zxing.common.ECI;
+import main.java.com.google.zxing.common.reedsolomon.GF256;
+import main.java.com.google.zxing.common.reedsolomon.ReedSolomonEncoder;
+import main.java.com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import main.java.com.google.zxing.qrcode.decoder.Mode;
+import main.java.com.google.zxing.qrcode.decoder.Version;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Hashtable;

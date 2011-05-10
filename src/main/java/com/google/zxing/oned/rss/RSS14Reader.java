@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.zxing.oned.rss;
+package main.java.com.google.zxing.oned.rss;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.DecodeHintType;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.Result;
-import com.google.zxing.ResultPoint;
-import com.google.zxing.ResultPointCallback;
-import com.google.zxing.common.BitArray;
+import main.java.com.google.zxing.BarcodeFormat;
+import main.java.com.google.zxing.DecodeHintType;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.Result;
+import main.java.com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.ResultPointCallback;
+import main.java.com.google.zxing.common.BitArray;
 
 import java.util.Enumeration;
 import java.util.Hashtable;

@@ -2,7 +2,7 @@
 // Contents subject to change without notice.
 // @generated
 
-package com.owfg.facade.bb.StoreManagement.stub;
+package main.java.com.owfg.facade.bb.StoreManagement.stub;
 
 import javax.xml.rpc.JAXRPCException;
 import javax.xml.namespace.QName;
@@ -11,7 +11,7 @@ import javax.microedition.xml.rpc.Type;
 import javax.microedition.xml.rpc.ComplexType;
 import javax.microedition.xml.rpc.Element;
 
-public class WeatherForecastSoap_Stub implements com.owfg.facade.bb.StoreManagement.stub.WeatherForecastSoap, javax.xml.rpc.Stub {
+public class WeatherForecastSoap_Stub implements main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherForecastSoap, javax.xml.rpc.Stub {
 	private String[] _propertyNames;
 	private Object[] _propertyValues;
 
@@ -65,7 +65,7 @@ public class WeatherForecastSoap_Stub implements com.owfg.facade.bb.StoreManagem
 	//  Begin user methods
 	// 
 
-	public com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getWeatherByZipCode(java.lang.String zipCode) throws java.rmi.RemoteException {
+	public main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getWeatherByZipCode(java.lang.String zipCode) throws java.rmi.RemoteException {
 		// Copy the incoming values into an Object array if needed.
 		Object[] inputObject = new Object[1];
 		inputObject[0] = zipCode;
@@ -83,14 +83,14 @@ public class WeatherForecastSoap_Stub implements com.owfg.facade.bb.StoreManagem
 			}
 			throw e;
 		}
-		com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts result;
+		main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts result;
 		// Convert the result into the right Java type.
 		// Unwrapped return value
 		Object[] getWeatherByZipCodeResultObj = (Object[]) ((Object[])resultObj)[0];
 		if (getWeatherByZipCodeResultObj == null) {
 			result = null;
 		} else {
-			result = new com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts();
+			result = new main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts();
 			float a_float;
 			Object latitudeObj = getWeatherByZipCodeResultObj[0];
 			a_float = ((java.lang.Float)latitudeObj).floatValue();
@@ -119,26 +119,26 @@ public class WeatherForecastSoap_Stub implements com.owfg.facade.bb.StoreManagem
 			Object statusObj = getWeatherByZipCodeResultObj[6];
 			string4 = (java.lang.String)statusObj;
 			result.setStatus(string4);
-			com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData arrayOfWeatherData;
+			main.java.com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData arrayOfWeatherData;
 			Object[] detailsObj = (Object[]) getWeatherByZipCodeResultObj[7];
 			if (detailsObj == null) {
 				arrayOfWeatherData = null;
 			} else {
-				arrayOfWeatherData = new com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData();
-				com.owfg.facade.bb.StoreManagement.stub.WeatherData[] weatherDataArray;
+				arrayOfWeatherData = new main.java.com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData();
+				main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherData[] weatherDataArray;
 				Object[] weatherDataObj = (Object[]) detailsObj[0];
 				if (weatherDataObj == null) {
 					weatherDataArray = null;
 				} else {
 					int weatherDataArraySize = weatherDataObj.length;
-					weatherDataArray = new com.owfg.facade.bb.StoreManagement.stub.WeatherData[weatherDataArraySize];
+					weatherDataArray = new main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherData[weatherDataArraySize];
 					for (int weatherDataArrayIndex = 0; 
 						weatherDataArrayIndex < weatherDataArraySize; 
 						++weatherDataArrayIndex) {
 						if (weatherDataObj[weatherDataArrayIndex] == null) {
 							weatherDataArray[weatherDataArrayIndex] = null;
 						} else {
-							weatherDataArray[weatherDataArrayIndex] = new com.owfg.facade.bb.StoreManagement.stub.WeatherData();
+							weatherDataArray[weatherDataArrayIndex] = new main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherData();
 							java.lang.String string5;
 							Object dayObj = ((Object[])weatherDataObj[weatherDataArrayIndex])[0];
 							string5 = (java.lang.String)dayObj;
@@ -173,7 +173,7 @@ public class WeatherForecastSoap_Stub implements com.owfg.facade.bb.StoreManagem
 		return result;
 	}
 
-	public com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getWeatherByPlaceName(java.lang.String placeName) throws java.rmi.RemoteException {
+	public main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getWeatherByPlaceName(java.lang.String placeName) throws java.rmi.RemoteException {
 		// Copy the incoming values into an Object array if needed.
 		Object[] inputObject = new Object[1];
 		inputObject[0] = placeName;
@@ -191,14 +191,14 @@ public class WeatherForecastSoap_Stub implements com.owfg.facade.bb.StoreManagem
 			}
 			throw e;
 		}
-		com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts result;
+		main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts result;
 		// Convert the result into the right Java type.
 		// Unwrapped return value
 		Object[] getWeatherByPlaceNameResultObj = (Object[]) ((Object[])resultObj)[0];
 		if (getWeatherByPlaceNameResultObj == null) {
 			result = null;
 		} else {
-			result = new com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts();
+			result = new main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts();
 			float a_float;
 			Object latitudeObj = getWeatherByPlaceNameResultObj[0];
 			a_float = ((java.lang.Float)latitudeObj).floatValue();
@@ -227,26 +227,26 @@ public class WeatherForecastSoap_Stub implements com.owfg.facade.bb.StoreManagem
 			Object statusObj = getWeatherByPlaceNameResultObj[6];
 			string4 = (java.lang.String)statusObj;
 			result.setStatus(string4);
-			com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData arrayOfWeatherData;
+			main.java.com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData arrayOfWeatherData;
 			Object[] detailsObj = (Object[]) getWeatherByPlaceNameResultObj[7];
 			if (detailsObj == null) {
 				arrayOfWeatherData = null;
 			} else {
-				arrayOfWeatherData = new com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData();
-				com.owfg.facade.bb.StoreManagement.stub.WeatherData[] weatherDataArray;
+				arrayOfWeatherData = new main.java.com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData();
+				main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherData[] weatherDataArray;
 				Object[] weatherDataObj = (Object[]) detailsObj[0];
 				if (weatherDataObj == null) {
 					weatherDataArray = null;
 				} else {
 					int weatherDataArraySize = weatherDataObj.length;
-					weatherDataArray = new com.owfg.facade.bb.StoreManagement.stub.WeatherData[weatherDataArraySize];
+					weatherDataArray = new main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherData[weatherDataArraySize];
 					for (int weatherDataArrayIndex = 0; 
 						weatherDataArrayIndex < weatherDataArraySize; 
 						++weatherDataArrayIndex) {
 						if (weatherDataObj[weatherDataArrayIndex] == null) {
 							weatherDataArray[weatherDataArrayIndex] = null;
 						} else {
-							weatherDataArray[weatherDataArrayIndex] = new com.owfg.facade.bb.StoreManagement.stub.WeatherData();
+							weatherDataArray[weatherDataArrayIndex] = new main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherData();
 							java.lang.String string5;
 							Object dayObj = ((Object[])weatherDataObj[weatherDataArrayIndex])[0];
 							string5 = (java.lang.String)dayObj;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.encoder;
+package main.java.com.google.zxing.qrcode.encoder;
 
 /**
  * A class which wraps a 2D array of bytes. The default usage is signed. If you want to use it as a

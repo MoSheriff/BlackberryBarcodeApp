@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.detector;
+package main.java.com.google.zxing.qrcode.detector;
 
-import com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.ResultPoint;
 
 /**
  * <p>Encapsulates a finder pattern, which are the three square patterns found in

@@ -1,6 +1,6 @@
-package com.owfg.facade.bb.StoreManagement.Logger;
+package main.java.com.owfg.facade.bb.StoreManagement.Logger;
 
-import com.owfg.facade.bb.StoreManagement.app.MyApp;
+import main.java.com.owfg.facade.bb.StoreManagement.app.MyApp;
 
 import net.rim.device.api.system.EventLogger;
 

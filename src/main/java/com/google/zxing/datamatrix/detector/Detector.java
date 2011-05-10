@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.google.zxing.datamatrix.detector;
+package main.java.com.google.zxing.datamatrix.detector;
 
-import com.google.zxing.NotFoundException;
-import com.google.zxing.ResultPoint;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.common.Collections;
-import com.google.zxing.common.Comparator;
-import com.google.zxing.common.DetectorResult;
-import com.google.zxing.common.GridSampler;
-import com.google.zxing.common.detector.WhiteRectangleDetector;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.common.Collections;
+import main.java.com.google.zxing.common.Comparator;
+import main.java.com.google.zxing.common.DetectorResult;
+import main.java.com.google.zxing.common.GridSampler;
+import main.java.com.google.zxing.common.detector.WhiteRectangleDetector;
 
 import java.util.Enumeration;
 import java.util.Hashtable;

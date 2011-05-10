@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.oned;
+package main.java.com.google.zxing.oned;
 
 import java.util.Vector;
 

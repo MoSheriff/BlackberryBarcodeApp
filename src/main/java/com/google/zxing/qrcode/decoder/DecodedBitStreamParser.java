@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.decoder;
+package main.java.com.google.zxing.qrcode.decoder;
 
-import com.google.zxing.FormatException;
-import com.google.zxing.common.BitSource;
-import com.google.zxing.common.CharacterSetECI;
-import com.google.zxing.common.DecoderResult;
-import com.google.zxing.common.StringUtils;
+import main.java.com.google.zxing.FormatException;
+import main.java.com.google.zxing.common.BitSource;
+import main.java.com.google.zxing.common.CharacterSetECI;
+import main.java.com.google.zxing.common.DecoderResult;
+import main.java.com.google.zxing.common.StringUtils;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Hashtable;

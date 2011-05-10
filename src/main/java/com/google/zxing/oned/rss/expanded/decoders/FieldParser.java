@@ -24,9 +24,9 @@
  *   http://www.piramidepse.com/
  */
 
-package com.google.zxing.oned.rss.expanded.decoders;
+package main.java.com.google.zxing.oned.rss.expanded.decoders;
 
-import com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.NotFoundException;
 
 /**
  * @author Pablo Orduña, University of Deusto (pablo.orduna@deusto.es)

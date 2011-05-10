@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.common.reedsolomon;
+package main.java.com.google.zxing.common.reedsolomon;
 
 /**
  * <p>Implements Reed-Solomon decoding, as the name implies.</p>

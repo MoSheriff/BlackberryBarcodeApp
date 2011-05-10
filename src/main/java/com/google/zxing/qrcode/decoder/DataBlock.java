@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.decoder;
+package main.java.com.google.zxing.qrcode.decoder;
 
 /**
  * <p>Encapsulates a block of data within a QR Code. QR Codes may split their data into

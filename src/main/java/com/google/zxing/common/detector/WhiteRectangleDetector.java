@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.zxing.common.detector;
+package main.java.com.google.zxing.common.detector;
 
-import com.google.zxing.NotFoundException;
-import com.google.zxing.ResultPoint;
-import com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.common.BitMatrix;
 
 /**
  * <p>

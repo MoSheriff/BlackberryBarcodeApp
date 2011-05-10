@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.common;
+package main.java.com.google.zxing.common;
 
 /**
  * <p>Represents a 2D matrix of bits. In function arguments below, and throughout the common

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.zxing.pdf417.decoder;
+package main.java.com.google.zxing.pdf417.decoder;
 
-import com.google.zxing.FormatException;
-import com.google.zxing.common.DecoderResult;
+import main.java.com.google.zxing.FormatException;
+import main.java.com.google.zxing.common.DecoderResult;
 
 /**
  * <p>This class contains the methods for decoding the PDF417 codewords.</p>

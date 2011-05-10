@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.detector;
+package main.java.com.google.zxing.qrcode.detector;
 
 /**
  * <p>Encapsulates information about finder patterns in an image, including the location of

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.decoder;
+package main.java.com.google.zxing.qrcode.decoder;
 
-import com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.common.BitMatrix;
 
 /**
  * <p>Encapsulates data masks for the data bits in a QR code, per ISO 18004:2006 6.8. Implementations

@@ -24,7 +24,7 @@
  *   http://www.piramidepse.com/
  */
 
-package com.google.zxing.oned.rss.expanded.decoders;
+package main.java.com.google.zxing.oned.rss.expanded.decoders;
 
 /**
  * @author Pablo Orduña, University of Deusto (pablo.orduna@deusto.es)

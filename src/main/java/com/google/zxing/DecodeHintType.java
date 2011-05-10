@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing;
+package main.java.com.google.zxing;
 
 /**
  * Encapsulates a type of hint that a caller may pass to a barcode reader to help it

@@ -24,10 +24,10 @@
  *   http://www.piramidepse.com/
  */
 
-package com.google.zxing.oned.rss.expanded;
+package main.java.com.google.zxing.oned.rss.expanded;
 
-import com.google.zxing.oned.rss.DataCharacter;
-import com.google.zxing.oned.rss.FinderPattern;
+import main.java.com.google.zxing.oned.rss.DataCharacter;
+import main.java.com.google.zxing.oned.rss.FinderPattern;
 
 /**
  * @author Pablo Orduña, University of Deusto (pablo.orduna@deusto.es)

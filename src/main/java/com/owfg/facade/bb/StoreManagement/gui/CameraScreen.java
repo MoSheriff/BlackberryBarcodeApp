@@ -1,6 +1,6 @@
-package com.owfg.facade.bb.StoreManagement.gui;
+package main.java.com.owfg.facade.bb.StoreManagement.gui;
 
-import com.owfg.facade.bb.StoreManagement.app.ScreenshotThread;
+import main.java.com.owfg.facade.bb.StoreManagement.app.ScreenshotThread;
 
 import net.rim.device.api.ui.container.MainScreen;
 

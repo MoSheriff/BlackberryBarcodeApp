@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.common;
+package main.java.com.google.zxing.common;
 
 /**
  * This is merely a clone of <code>Comparator</code> since it is not available in

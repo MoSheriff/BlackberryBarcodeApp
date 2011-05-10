@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.zxing.oned.rss;
+package main.java.com.google.zxing.oned.rss;
 
-import com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.ResultPoint;
 
 public final class FinderPattern {
 

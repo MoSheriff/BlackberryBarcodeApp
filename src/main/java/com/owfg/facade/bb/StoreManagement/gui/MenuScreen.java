@@ -1,7 +1,7 @@
 package main.java.com.owfg.facade.bb.StoreManagement.gui;
 
-import com.owfg.facade.bb.StoreManagement.app.MyApp;
-import com.owfg.facade.bb.StoreManagement.weatherExample.WeatherScreen;
+import main.java.com.owfg.facade.bb.StoreManagement.app.MyApp;
+import main.java.com.owfg.facade.bb.StoreManagement.weatherExample.WeatherScreen;
 
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.FieldChangeListener;

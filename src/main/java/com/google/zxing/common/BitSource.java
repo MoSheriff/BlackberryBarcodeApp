@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.common;
+package main.java.com.google.zxing.common;
 
 /**
  * <p>This provides an easy abstraction to read bits at a time from a sequence of bytes, where the

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing;
+package main.java.com.google.zxing;
 
 /**
  * <p>Encapsulates a point of interest in an image containing a barcode. Typically, this

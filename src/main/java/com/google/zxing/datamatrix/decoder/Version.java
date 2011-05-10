@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.zxing.datamatrix.decoder;
+package main.java.com.google.zxing.datamatrix.decoder;
 
-import com.google.zxing.FormatException;
+import main.java.com.google.zxing.FormatException;
 
 /**
  * The Version object encapsulates attributes about a particular

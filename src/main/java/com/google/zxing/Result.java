@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing;
+package main.java.com.google.zxing;
 
 import java.util.Enumeration;
 import java.util.Hashtable;

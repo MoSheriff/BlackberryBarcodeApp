@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package com.google.zxing.datamatrix;
+package main.java.com.google.zxing.datamatrix;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.BinaryBitmap;
-import com.google.zxing.ChecksumException;
-import com.google.zxing.DecodeHintType;
-import com.google.zxing.FormatException;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.Reader;
-import com.google.zxing.Result;
-import com.google.zxing.ResultMetadataType;
-import com.google.zxing.ResultPoint;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.common.DecoderResult;
-import com.google.zxing.common.DetectorResult;
-import com.google.zxing.datamatrix.decoder.Decoder;
-import com.google.zxing.datamatrix.detector.Detector;
+import main.java.com.google.zxing.BarcodeFormat;
+import main.java.com.google.zxing.BinaryBitmap;
+import main.java.com.google.zxing.ChecksumException;
+import main.java.com.google.zxing.DecodeHintType;
+import main.java.com.google.zxing.FormatException;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.Reader;
+import main.java.com.google.zxing.Result;
+import main.java.com.google.zxing.ResultMetadataType;
+import main.java.com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.common.DecoderResult;
+import main.java.com.google.zxing.common.DetectorResult;
+import main.java.com.google.zxing.datamatrix.decoder.Decoder;
+import main.java.com.google.zxing.datamatrix.detector.Detector;
 
 import java.util.Hashtable;
 
@@ -91,7 +91,7 @@ public final class DataMatrixReader implements Reader {
    * around it. This is a specialized method that works exceptionally fast in this special
    * case.
    *
-   * @see com.google.zxing.qrcode.QRCodeReader#extractPureBits(BitMatrix)
+   * @see main.java.com.google.zxing.qrcode.QRCodeReader#extractPureBits(BitMatrix)
    */
   private static BitMatrix extractPureBits(BitMatrix image) throws NotFoundException {
 

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.google.zxing.oned;
+package main.java.com.google.zxing.oned;
 
 import java.util.Hashtable;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.Result;
-import com.google.zxing.ResultMetadataType;
-import com.google.zxing.ResultPoint;
-import com.google.zxing.common.BitArray;
+import main.java.com.google.zxing.BarcodeFormat;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.Result;
+import main.java.com.google.zxing.ResultMetadataType;
+import main.java.com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.common.BitArray;
 
 final class UPCEANExtensionSupport {
 

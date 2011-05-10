@@ -1,13 +1,12 @@
-package com.owfg.facade.bb.StoreManagement.app;
-
+package main.java.com.owfg.facade.bb.StoreManagement.app;
 import java.io.IOException;
 import javax.microedition.media.Manager;
 import javax.microedition.media.MediaException;
 import javax.microedition.media.Player;
 import javax.microedition.media.control.VideoControl;
 
-import com.owfg.facade.bb.StoreManagement.gui.CameraScreen;
-import com.owfg.facade.bb.StoreManagement.gui.MenuScreen;
+import main.java.com.owfg.facade.bb.StoreManagement.gui.CameraScreen;
+import main.java.com.owfg.facade.bb.StoreManagement.gui.MenuScreen;
 
 import net.rim.device.api.system.EventInjector;
 import net.rim.device.api.system.EventLogger;

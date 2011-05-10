@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.zxing.pdf417.detector;
+package main.java.com.google.zxing.pdf417.detector;
 
-import com.google.zxing.BinaryBitmap;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.ResultPoint;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.common.DetectorResult;
-import com.google.zxing.common.GridSampler;
+import main.java.com.google.zxing.BinaryBitmap;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.common.DetectorResult;
+import main.java.com.google.zxing.common.GridSampler;
 
 import java.util.Hashtable;
 

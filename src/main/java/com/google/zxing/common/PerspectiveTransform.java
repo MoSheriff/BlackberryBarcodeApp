@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.common;
+package main.java.com.google.zxing.common;
 
 /**
  * <p>This class implements a perspective transform in two dimensions. Given four source and four

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.zxing;
+package main.java.com.google.zxing;
 
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.oned.Code128Writer;
-import com.google.zxing.oned.Code39Writer;
-import com.google.zxing.oned.EAN13Writer;
-import com.google.zxing.oned.EAN8Writer;
-import com.google.zxing.oned.ITFWriter;
-import com.google.zxing.qrcode.QRCodeWriter;
+import main.java.com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.oned.Code128Writer;
+import main.java.com.google.zxing.oned.Code39Writer;
+import main.java.com.google.zxing.oned.EAN13Writer;
+import main.java.com.google.zxing.oned.EAN8Writer;
+import main.java.com.google.zxing.oned.ITFWriter;
+import main.java.com.google.zxing.qrcode.QRCodeWriter;
 
 import java.util.Hashtable;
 

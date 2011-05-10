@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.zxing.datamatrix.decoder;
+package main.java.com.google.zxing.datamatrix.decoder;
 
-import com.google.zxing.ChecksumException;
-import com.google.zxing.FormatException;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.common.DecoderResult;
-import com.google.zxing.common.reedsolomon.GF256;
-import com.google.zxing.common.reedsolomon.ReedSolomonDecoder;
-import com.google.zxing.common.reedsolomon.ReedSolomonException;
+import main.java.com.google.zxing.ChecksumException;
+import main.java.com.google.zxing.FormatException;
+import main.java.com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.common.DecoderResult;
+import main.java.com.google.zxing.common.reedsolomon.GF256;
+import main.java.com.google.zxing.common.reedsolomon.ReedSolomonDecoder;
+import main.java.com.google.zxing.common.reedsolomon.ReedSolomonException;
 
 /**
  * <p>The main class which implements Data Matrix Code decoding -- as opposed to locating and extracting

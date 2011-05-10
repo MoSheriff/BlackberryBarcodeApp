@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.zxing.common;
+package main.java.com.google.zxing.common;
 
-import com.google.zxing.Binarizer;
-import com.google.zxing.LuminanceSource;
-import com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.Binarizer;
+import main.java.com.google.zxing.LuminanceSource;
+import main.java.com.google.zxing.NotFoundException;
 
 /**
  * This Binarizer implementation uses the old ZXing global histogram approach. It is suitable

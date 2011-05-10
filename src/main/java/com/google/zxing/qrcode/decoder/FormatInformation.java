@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.decoder;
+package main.java.com.google.zxing.qrcode.decoder;
 
 /**
  * <p>Encapsulates a QR Code's format information, including the data mask used and

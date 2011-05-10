@@ -1,8 +1,8 @@
-package com.owfg.facade.bb.StoreManagement.weatherExample;
+package main.java.com.owfg.facade.bb.StoreManagement.weatherExample;
 
-import com.owfg.facade.bb.StoreManagement.app.MyApp;
-import com.owfg.facade.bb.StoreManagement.stub.WeatherForecastSoap_Stub;
-import com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts;
+import main.java.com.owfg.facade.bb.StoreManagement.app.MyApp;
+import main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherForecastSoap_Stub;
+import main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts;
 
 import net.rim.device.api.ui.MenuItem;
 import net.rim.device.api.ui.component.Dialog;

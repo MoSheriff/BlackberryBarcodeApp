@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.detector;
+package main.java.com.google.zxing.qrcode.detector;
 
-import com.google.zxing.DecodeHintType;
-import com.google.zxing.FormatException;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.ResultPoint;
-import com.google.zxing.ResultPointCallback;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.common.DetectorResult;
-import com.google.zxing.common.GridSampler;
-import com.google.zxing.common.PerspectiveTransform;
-import com.google.zxing.qrcode.decoder.Version;
+import main.java.com.google.zxing.DecodeHintType;
+import main.java.com.google.zxing.FormatException;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.ResultPointCallback;
+import main.java.com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.common.DetectorResult;
+import main.java.com.google.zxing.common.GridSampler;
+import main.java.com.google.zxing.common.PerspectiveTransform;
+import main.java.com.google.zxing.qrcode.decoder.Version;
 
 import java.util.Hashtable;
 

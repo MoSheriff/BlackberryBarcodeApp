@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.common;
+package main.java.com.google.zxing.common;
 
 /**
  * Superclass of classes encapsulating types ECIs, according to "Extended Channel Interpretations"

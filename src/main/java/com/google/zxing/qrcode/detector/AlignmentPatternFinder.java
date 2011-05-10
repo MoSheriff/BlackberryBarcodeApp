@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.detector;
+package main.java.com.google.zxing.qrcode.detector;
 
-import com.google.zxing.NotFoundException;
-import com.google.zxing.ResultPoint;
-import com.google.zxing.ResultPointCallback;
-import com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.ResultPointCallback;
+import main.java.com.google.zxing.common.BitMatrix;
 
 import java.util.Vector;
 
