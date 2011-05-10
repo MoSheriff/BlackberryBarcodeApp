@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.oned.rss;
+package main.java.com.google.zxing.oned.rss;
 
 final class Pair extends DataCharacter {
 

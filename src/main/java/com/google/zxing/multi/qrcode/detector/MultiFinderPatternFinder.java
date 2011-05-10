@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.google.zxing.multi.qrcode.detector;
+package main.java.com.google.zxing.multi.qrcode.detector;
 
-import com.google.zxing.DecodeHintType;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.ResultPoint;
-import com.google.zxing.ResultPointCallback;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.common.Collections;
-import com.google.zxing.common.Comparator;
-import com.google.zxing.qrcode.detector.FinderPattern;
-import com.google.zxing.qrcode.detector.FinderPatternFinder;
-import com.google.zxing.qrcode.detector.FinderPatternInfo;
+import main.java.com.google.zxing.DecodeHintType;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.ResultPointCallback;
+import main.java.com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.common.Collections;
+import main.java.com.google.zxing.common.Comparator;
+import main.java.com.google.zxing.qrcode.detector.FinderPattern;
+import main.java.com.google.zxing.qrcode.detector.FinderPatternFinder;
+import main.java.com.google.zxing.qrcode.detector.FinderPatternInfo;
 
 import java.util.Hashtable;
 import java.util.Vector;

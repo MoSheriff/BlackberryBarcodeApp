@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.zxing.common;
+package main.java.com.google.zxing.common;
 
-import com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.NotFoundException;
 
 /**
  * Implementations of this class can, given locations of finder patterns for a QR code in an

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.zxing.oned.rss;
+package main.java.com.google.zxing.oned.rss;
 
-import com.google.zxing.NotFoundException;
-import com.google.zxing.oned.OneDReader;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.oned.OneDReader;
 
 public abstract class AbstractRSSReader extends OneDReader {
 

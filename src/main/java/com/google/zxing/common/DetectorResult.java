@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.zxing.common;
+package main.java.com.google.zxing.common;
 
-import com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.ResultPoint;
 
 /**
  * <p>Encapsulates the result of detecting a barcode in an image. This includes the raw

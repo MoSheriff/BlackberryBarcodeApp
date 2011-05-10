@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.decoder;
+package main.java.com.google.zxing.qrcode.decoder;
 
-import com.google.zxing.ChecksumException;
-import com.google.zxing.FormatException;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.common.DecoderResult;
-import com.google.zxing.common.reedsolomon.GF256;
-import com.google.zxing.common.reedsolomon.ReedSolomonDecoder;
-import com.google.zxing.common.reedsolomon.ReedSolomonException;
+import main.java.com.google.zxing.ChecksumException;
+import main.java.com.google.zxing.FormatException;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.common.DecoderResult;
+import main.java.com.google.zxing.common.reedsolomon.GF256;
+import main.java.com.google.zxing.common.reedsolomon.ReedSolomonDecoder;
+import main.java.com.google.zxing.common.reedsolomon.ReedSolomonException;
 
 import java.util.Hashtable;
 

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.encoder;
+package main.java.com.google.zxing.qrcode.encoder;
 
-import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
-import com.google.zxing.qrcode.decoder.Mode;
+import main.java.com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import main.java.com.google.zxing.qrcode.decoder.Mode;
 
 /**
  * @author satorux@google.com (Satoru Takabayashi) - creator

@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode;
+package main.java.com.google.zxing.qrcode;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.BinaryBitmap;
-import com.google.zxing.ChecksumException;
-import com.google.zxing.DecodeHintType;
-import com.google.zxing.FormatException;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.Reader;
-import com.google.zxing.Result;
-import com.google.zxing.ResultMetadataType;
-import com.google.zxing.ResultPoint;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.common.DecoderResult;
-import com.google.zxing.common.DetectorResult;
-import com.google.zxing.qrcode.decoder.Decoder;
-import com.google.zxing.qrcode.detector.Detector;
+import main.java.com.google.zxing.BarcodeFormat;
+import main.java.com.google.zxing.BinaryBitmap;
+import main.java.com.google.zxing.ChecksumException;
+import main.java.com.google.zxing.DecodeHintType;
+import main.java.com.google.zxing.FormatException;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.Reader;
+import main.java.com.google.zxing.Result;
+import main.java.com.google.zxing.ResultMetadataType;
+import main.java.com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.common.DecoderResult;
+import main.java.com.google.zxing.common.DetectorResult;
+import main.java.com.google.zxing.qrcode.decoder.Decoder;
+import main.java.com.google.zxing.qrcode.detector.Detector;
 
 import java.util.Hashtable;
 

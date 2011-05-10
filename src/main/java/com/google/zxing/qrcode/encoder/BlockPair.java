@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.encoder;
+package main.java.com.google.zxing.qrcode.encoder;
 
 final class BlockPair {
 

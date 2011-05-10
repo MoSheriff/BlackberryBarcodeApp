@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.zxing.common;
+package main.java.com.google.zxing.common;
 
 import java.util.Hashtable;
 
-import com.google.zxing.DecodeHintType;
+import main.java.com.google.zxing.DecodeHintType;
 
 /**
  * Common string-related functions.

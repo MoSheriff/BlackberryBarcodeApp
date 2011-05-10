@@ -1,4 +1,4 @@
-package com.owfg.facade.bb.StoreManagement.app;
+package main.java.com.owfg.facade.bb.StoreManagement.app;
 
 import java.util.Enumeration;
 import java.util.Hashtable;

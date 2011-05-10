@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.zxing;
+package main.java.com.google.zxing;
 
-import com.google.zxing.datamatrix.DataMatrixReader;
-import com.google.zxing.oned.MultiFormatOneDReader;
-import com.google.zxing.pdf417.PDF417Reader;
-import com.google.zxing.qrcode.QRCodeReader;
+import main.java.com.google.zxing.datamatrix.DataMatrixReader;
+import main.java.com.google.zxing.oned.MultiFormatOneDReader;
+import main.java.com.google.zxing.pdf417.PDF417Reader;
+import main.java.com.google.zxing.qrcode.QRCodeReader;
 
 import java.util.Hashtable;
 import java.util.Vector;

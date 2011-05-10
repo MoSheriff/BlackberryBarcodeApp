@@ -2,7 +2,7 @@
 // Contents subject to change without notice.
 // JSR-172 Reference Implementation wscompile 1.0, using: JAX-RPC Standard Implementation (1.1, build R59)
 
-package com.owfg.facade.bb.StoreManagement.stub;
+package main.java.com.owfg.facade.bb.StoreManagement.stub;
 
 
 public class WeatherForecasts {
@@ -13,12 +13,12 @@ public class WeatherForecasts {
     protected java.lang.String placeName;
     protected java.lang.String stateCode;
     protected java.lang.String status;
-    protected com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData details;
+    protected main.java.com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData details;
     
     public WeatherForecasts() {
     }
     
-    public WeatherForecasts(float latitude, float longitude, float allocationFactor, java.lang.String fipsCode, java.lang.String placeName, java.lang.String stateCode, java.lang.String status, com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData details) {
+    public WeatherForecasts(float latitude, float longitude, float allocationFactor, java.lang.String fipsCode, java.lang.String placeName, java.lang.String stateCode, java.lang.String status, main.java.com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData details) {
         this.latitude = latitude;
         this.longitude = longitude;
         this.allocationFactor = allocationFactor;
@@ -85,11 +85,11 @@ public class WeatherForecasts {
         this.status = status;
     }
     
-    public com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData getDetails() {
+    public main.java.com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData getDetails() {
         return details;
     }
     
-    public void setDetails(com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData details) {
+    public void setDetails(main.java.com.owfg.facade.bb.StoreManagement.stub.ArrayOfWeatherData details) {
         this.details = details;
     }
 }

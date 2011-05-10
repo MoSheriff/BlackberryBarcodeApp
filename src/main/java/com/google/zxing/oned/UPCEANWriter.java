@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.zxing.oned;
+package main.java.com.google.zxing.oned;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.Writer;
-import com.google.zxing.WriterException;
-import com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.BarcodeFormat;
+import main.java.com.google.zxing.Writer;
+import main.java.com.google.zxing.WriterException;
+import main.java.com.google.zxing.common.BitMatrix;
 
 import java.util.Hashtable;
 

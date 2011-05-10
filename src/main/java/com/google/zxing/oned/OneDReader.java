@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package com.google.zxing.oned;
+package main.java.com.google.zxing.oned;
 
-import com.google.zxing.BinaryBitmap;
-import com.google.zxing.ChecksumException;
-import com.google.zxing.DecodeHintType;
-import com.google.zxing.FormatException;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.Reader;
-import com.google.zxing.ReaderException;
-import com.google.zxing.Result;
-import com.google.zxing.ResultMetadataType;
-import com.google.zxing.ResultPoint;
-import com.google.zxing.common.BitArray;
+import main.java.com.google.zxing.BinaryBitmap;
+import main.java.com.google.zxing.ChecksumException;
+import main.java.com.google.zxing.DecodeHintType;
+import main.java.com.google.zxing.FormatException;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.Reader;
+import main.java.com.google.zxing.ReaderException;
+import main.java.com.google.zxing.Result;
+import main.java.com.google.zxing.ResultMetadataType;
+import main.java.com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.common.BitArray;
 
 import java.util.Enumeration;
 import java.util.Hashtable;

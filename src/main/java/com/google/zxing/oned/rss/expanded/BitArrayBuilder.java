@@ -24,11 +24,11 @@
  *   http://www.piramidepse.com/
  */
 
-package com.google.zxing.oned.rss.expanded;
+package main.java.com.google.zxing.oned.rss.expanded;
 
 import java.util.Vector;
 
-import com.google.zxing.common.BitArray;
+import main.java.com.google.zxing.common.BitArray;
 
 /**
  * @author Pablo Orduña, University of Deusto (pablo.orduna@deusto.es)

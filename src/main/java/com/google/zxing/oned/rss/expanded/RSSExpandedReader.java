@@ -24,21 +24,21 @@
  *   http://www.piramidepse.com/
  */
 
-package com.google.zxing.oned.rss.expanded;
+package main.java.com.google.zxing.oned.rss.expanded;
 
 import java.util.Hashtable;
 import java.util.Vector;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.Result;
-import com.google.zxing.ResultPoint;
-import com.google.zxing.common.BitArray;
-import com.google.zxing.oned.rss.AbstractRSSReader;
-import com.google.zxing.oned.rss.DataCharacter;
-import com.google.zxing.oned.rss.FinderPattern;
-import com.google.zxing.oned.rss.RSSUtils;
-import com.google.zxing.oned.rss.expanded.decoders.AbstractExpandedDecoder;
+import main.java.com.google.zxing.BarcodeFormat;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.Result;
+import main.java.com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.common.BitArray;
+import main.java.com.google.zxing.oned.rss.AbstractRSSReader;
+import main.java.com.google.zxing.oned.rss.DataCharacter;
+import main.java.com.google.zxing.oned.rss.FinderPattern;
+import main.java.com.google.zxing.oned.rss.RSSUtils;
+import main.java.com.google.zxing.oned.rss.expanded.decoders.AbstractExpandedDecoder;
 
 /**
  * @author Pablo Orduña, University of Deusto (pablo.orduna@deusto.es)

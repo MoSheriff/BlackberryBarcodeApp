@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.zxing.oned;
+package main.java.com.google.zxing.oned;
 
 import java.util.Hashtable;
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.WriterException;
-import com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.BarcodeFormat;
+import main.java.com.google.zxing.WriterException;
+import main.java.com.google.zxing.common.BitMatrix;
 
 /**
  * This object renders a ITF code as a {@link BitMatrix}.

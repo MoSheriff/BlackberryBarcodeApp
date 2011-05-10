@@ -1,8 +1,8 @@
-package com.owfg.facade.bb.StoreManagement.app;
+package main.java.com.owfg.facade.bb.StoreManagement.app;
 
 import net.rim.device.api.system.Bitmap;
 
-import com.google.zxing.LuminanceSource;
+import main.java.com.google.zxing.LuminanceSource;
 
 public final class CustomBitmapLuminanceSource extends LuminanceSource {
 

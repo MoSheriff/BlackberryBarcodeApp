@@ -2,24 +2,24 @@
 // Contents subject to change without notice.
 // JSR-172 Reference Implementation wscompile 1.0, using: JAX-RPC Standard Implementation (1.1, build R59)
 
-package com.owfg.facade.bb.StoreManagement.stub;
+package main.java.com.owfg.facade.bb.StoreManagement.stub;
 
 
 public class GetWeatherByZipCodeResponse {
-    protected com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getWeatherByZipCodeResult;
+    protected main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getWeatherByZipCodeResult;
     
     public GetWeatherByZipCodeResponse() {
     }
     
-    public GetWeatherByZipCodeResponse(com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getWeatherByZipCodeResult) {
+    public GetWeatherByZipCodeResponse(main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getWeatherByZipCodeResult) {
         this.getWeatherByZipCodeResult = getWeatherByZipCodeResult;
     }
     
-    public com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getGetWeatherByZipCodeResult() {
+    public main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getGetWeatherByZipCodeResult() {
         return getWeatherByZipCodeResult;
     }
     
-    public void setGetWeatherByZipCodeResult(com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getWeatherByZipCodeResult) {
+    public void setGetWeatherByZipCodeResult(main.java.com.owfg.facade.bb.StoreManagement.stub.WeatherForecasts getWeatherByZipCodeResult) {
         this.getWeatherByZipCodeResult = getWeatherByZipCodeResult;
     }
 }

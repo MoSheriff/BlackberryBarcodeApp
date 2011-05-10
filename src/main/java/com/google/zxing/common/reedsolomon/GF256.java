@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.common.reedsolomon;
+package main.java.com.google.zxing.common.reedsolomon;
 
 /**
  * <p>This class contains utility methods for performing mathematical operations over

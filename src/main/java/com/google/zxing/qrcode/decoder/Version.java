@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.decoder;
+package main.java.com.google.zxing.qrcode.decoder;
 
-import com.google.zxing.FormatException;
-import com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.FormatException;
+import main.java.com.google.zxing.common.BitMatrix;
 
 /**
  * See ISO 18004:2006 Annex D

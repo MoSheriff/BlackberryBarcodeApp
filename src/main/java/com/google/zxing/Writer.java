@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.zxing;
+package main.java.com.google.zxing;
 
-import com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.common.BitMatrix;
 
 import java.util.Hashtable;
 

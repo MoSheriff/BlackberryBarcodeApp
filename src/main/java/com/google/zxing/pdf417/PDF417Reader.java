@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package com.google.zxing.pdf417;
+package main.java.com.google.zxing.pdf417;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.BinaryBitmap;
-import com.google.zxing.DecodeHintType;
-import com.google.zxing.FormatException;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.Reader;
-import com.google.zxing.Result;
-import com.google.zxing.ResultPoint;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.common.DecoderResult;
-import com.google.zxing.common.DetectorResult;
-import com.google.zxing.pdf417.decoder.Decoder;
-import com.google.zxing.pdf417.detector.Detector;
-import com.google.zxing.qrcode.QRCodeReader;
+import main.java.com.google.zxing.BarcodeFormat;
+import main.java.com.google.zxing.BinaryBitmap;
+import main.java.com.google.zxing.DecodeHintType;
+import main.java.com.google.zxing.FormatException;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.Reader;
+import main.java.com.google.zxing.Result;
+import main.java.com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.common.DecoderResult;
+import main.java.com.google.zxing.common.DetectorResult;
+import main.java.com.google.zxing.pdf417.decoder.Decoder;
+import main.java.com.google.zxing.pdf417.detector.Detector;
+import main.java.com.google.zxing.qrcode.QRCodeReader;
 
 import java.util.Hashtable;
 

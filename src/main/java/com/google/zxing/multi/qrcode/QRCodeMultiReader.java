@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package com.google.zxing.multi.qrcode;
+package main.java.com.google.zxing.multi.qrcode;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.BinaryBitmap;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.ReaderException;
-import com.google.zxing.Result;
-import com.google.zxing.ResultMetadataType;
-import com.google.zxing.ResultPoint;
-import com.google.zxing.common.DecoderResult;
-import com.google.zxing.common.DetectorResult;
-import com.google.zxing.multi.MultipleBarcodeReader;
-import com.google.zxing.multi.qrcode.detector.MultiDetector;
-import com.google.zxing.qrcode.QRCodeReader;
+import main.java.com.google.zxing.BarcodeFormat;
+import main.java.com.google.zxing.BinaryBitmap;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.ReaderException;
+import main.java.com.google.zxing.Result;
+import main.java.com.google.zxing.ResultMetadataType;
+import main.java.com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.common.DecoderResult;
+import main.java.com.google.zxing.common.DetectorResult;
+import main.java.com.google.zxing.multi.MultipleBarcodeReader;
+import main.java.com.google.zxing.multi.qrcode.detector.MultiDetector;
+import main.java.com.google.zxing.qrcode.QRCodeReader;
 
 import java.util.Hashtable;
 import java.util.Vector;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.detector;
+package main.java.com.google.zxing.qrcode.detector;
 
-import com.google.zxing.ResultPoint;
+import main.java.com.google.zxing.ResultPoint;
 
 /**
  * <p>Encapsulates an alignment pattern, which are the smaller square patterns found in

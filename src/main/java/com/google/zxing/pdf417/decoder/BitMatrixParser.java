@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.zxing.pdf417.decoder;
+package main.java.com.google.zxing.pdf417.decoder;
 
-import com.google.zxing.FormatException;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.common.BitMatrix;
+import main.java.com.google.zxing.FormatException;
+import main.java.com.google.zxing.NotFoundException;
+import main.java.com.google.zxing.common.BitMatrix;
 
 /**
  * <p>

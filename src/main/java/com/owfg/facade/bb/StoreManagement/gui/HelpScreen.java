@@ -1,4 +1,4 @@
-package com.owfg.facade.bb.StoreManagement.gui;
+package main.java.com.owfg.facade.bb.StoreManagement.gui;
 
 import net.rim.device.api.ui.component.LabelField;
 import net.rim.device.api.ui.component.RichTextField;
