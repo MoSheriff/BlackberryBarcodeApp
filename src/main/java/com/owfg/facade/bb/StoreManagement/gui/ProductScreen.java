@@ -19,81 +19,72 @@ public class ProductScreen extends MainScreen {
 	private LabelField productName;
 	private EditField boh, onOrder, min, inTransit, fcst, pack, reg, source;
 	private StoreManagementInfo productInfo;
-	
+
 	/**
-	 * Constructor for the product screen
-	 * Sets the layout of all the different fields
-	 * @author Marcel Vangrootheest, Warren Voelkl
+	 * Constructor for the product screen Sets the layout of all the different
+	 * fields
+	 * 
+	 * @author Marcel Vangrootheest
 	 */
 	public ProductScreen() {
 		super();
 		MyApp.resultText = "";
 		VerticalFieldManager vfm = new VerticalFieldManager(USE_ALL_WIDTH);
-		
-		//Fields for a form
+
+		// Fields for a form
 		VerticalFieldManager form = new VerticalFieldManager(FIELD_HCENTER);
 		form.setMargin(10, 50, 10, 50);
-		EditField upcField = new EditField("UPC: ", upc, maxUPCLength, FIELD_LEFT);
+		EditField upcField = new EditField("UPC: ", upc, maxUPCLength,
+				FIELD_LEFT);
 		form.add(upcField);
 		form.add(new ObjectChoiceField("Store: ", getStores(), 0));
 		vfm.add(form);
-		
+
 		productName = new LabelField("", LabelField.ELLIPSIS | FIELD_HCENTER);
 		vfm.add(productName);
-		
-		//Result grid
+
+		// Result grid
 		GridFieldManager grid = new GridFieldManager(resultRows, resultCols,
 				GridFieldManager.FIXED_SIZE | FIELD_HCENTER);
-		
-		boh = new EditField("BOH: ", "", resultBoxLength, FIELD_RIGHT | READONLY);
+
+		boh = new EditField("BOH: ", "", resultBoxLength, FIELD_RIGHT
+				| READONLY);
 		grid.add(boh);
-		onOrder = new EditField("On Order: ", "", resultBoxLength, FIELD_RIGHT | READONLY);
+		onOrder = new EditField("On Order: ", "", resultBoxLength, FIELD_RIGHT
+				| READONLY);
 		grid.add(onOrder);
-		min = new EditField("Min: ", "", resultBoxLength, FIELD_RIGHT | READONLY);
+		min = new EditField("Min: ", "", resultBoxLength, FIELD_RIGHT
+				| READONLY);
 		grid.add(min);
-		inTransit = new EditField("In Transit: ", "", resultBoxLength, FIELD_RIGHT | READONLY);
+		inTransit = new EditField("In Transit: ", "", resultBoxLength,
+				FIELD_RIGHT | READONLY);
 		grid.add(inTransit);
-		fcst = new EditField("Fcst: ", "", resultBoxLength, FIELD_RIGHT | READONLY);
+		fcst = new EditField("Fcst: ", "", resultBoxLength, FIELD_RIGHT
+				| READONLY);
 		grid.add(fcst);
-		pack = new EditField("Pack: ", "", resultBoxLength, FIELD_RIGHT | READONLY);
+		pack = new EditField("Pack: ", "", resultBoxLength, FIELD_RIGHT
+				| READONLY);
 		grid.add(pack);
-		reg = new EditField("Reg: ", "", resultBoxLength, FIELD_RIGHT | READONLY);
+		reg = new EditField("Reg: ", "", resultBoxLength, FIELD_RIGHT
+				| READONLY);
 		grid.add(reg);
-		source = new EditField("Source: ", "", resultBoxLength, FIELD_RIGHT | READONLY);
+		source = new EditField("Source: ", "", resultBoxLength, FIELD_RIGHT
+				| READONLY);
 		grid.add(source);
-		
+
 		grid.setColumnPadding(100);
 		grid.setRowPadding(10);
 		vfm.add(grid);
 		add(vfm);
 	}
-	
-	/**
-	 * 
-	 * @return a list of stores
-	 */
-    private String[] getStores() {
-    	String[] s = null;//s = 
-    	Store[] recieveStores = null;
-    	if (ws == null) {
-    		ws = new WebService();
-    	}
-    	try {
-			recieveStores = ws.getStores();
-		} catch (Exception e) {
-			//TODO Dialog.something(Dialog.D_YES_NO, "Exit?") == 4
-			Logger.logErrorEvent("ProductScreen.getStores(): " + e);
-			String[] fail = {"918 Fleetwood", "930 Maple Ridge"};
-			return fail;
-		}
-		s = new String[recieveStores.length];
-		for (int i = 0; i != recieveStores.length; i++) {
-			s[i] = new String(recieveStores[i].getStoreId()  //might want this to be bannerID
-					+ " " + recieveStores[i].getStoreName());
-		}
-		return s;
-	}
 
+	/**
+	 * Creates a menu item
+	 * <p>
+	 * Reloads the camera screen and unloads the current screen
+	 * 
+	 * @author Marcel Vangrootheest
+	 */
 	public MenuItem scan = new MenuItem("Scan again", 100, 1) {
 		public void run() {
 			synchronized (MyApp.getEventLock()) {
@@ -104,12 +95,19 @@ public class ProductScreen extends MainScreen {
 		}
 	};
 
-    public MenuItem submit = new MenuItem("Submit", 100, 1) {
+	/**
+	 * Creates a menu item
+	 * <p>
+	 * calls the function to load the function fields
+	 * 
+	 * @author Warren Voelkl
+	 */
+	public MenuItem submit = new MenuItem("Submit", 100, 1) {
 		public void run() {
 			if (WebserviceRecieveInfoByUPC()) {
 				setProductFields();
 			} else {
-				//bogus results for testing
+				// TODO remove code below and display exception dialog
 				productName.setText("Failed results");
 				boh.setText("6");
 				onOrder.setText("1");
@@ -121,25 +119,60 @@ public class ProductScreen extends MainScreen {
 				source.setText("DSD");
 			}
 		}
-
-		public boolean WebserviceRecieveInfoByUPC() {
-			
-			if (ws == null) {
-				ws = new WebService();
-			}
-			try {
-				//TODO dialog box on fail
-				productInfo = ws.getInfo(upc);
-			} catch (Exception e) {
-				Logger.logSevereErrorEvent("WebserviceRecieveInfoByUPC(): " + e);
-				return false;
-			}
-			return true;
-			
-		}
 	};
-	
-    public MenuItem quit = new MenuItem("Exit", 100, 1) {
+
+	/**
+	 * Calls the web service class and retrieves a product info object
+	 * <p>
+	 * 
+	 * @return false on failure true on success
+	 * @author Warren Voelkl
+	 */
+	public boolean WebserviceRecieveInfoByUPC() {
+
+		if (ws == null) {
+			ws = new WebService();
+		}
+		try {
+			// TODO dialog box on fail
+			productInfo = ws.getInfo(upc);
+		} catch (Exception e) {
+			Logger.logSevereErrorEvent("WebserviceRecieveInfoByUPC(): " + e);
+			return false;
+		}
+		return true;
+
+	}
+
+	/**
+	 * Gets a list of stores from server
+	 * TODO popup dialog and return null string on failure
+	 * @return a list of stores 
+	 */
+	private String[] getStores() {
+		String[] s = null;// s =
+		Store[] recieveStores = null;
+		if (ws == null) {
+			ws = new WebService();
+		}
+		try {
+			recieveStores = ws.getStores();
+		} catch (Exception e) {
+			// TODO Dialog.something(Dialog.D_YES_NO, "Exit?") == 4
+			Logger.logErrorEvent("ProductScreen.getStores(): " + e);
+			String[] fail = { "918 Fleetwood", "930 Maple Ridge" };
+			return fail;
+		}
+		s = new String[recieveStores.length];
+		for (int i = 0; i != recieveStores.length; i++) {
+			s[i] = new String(recieveStores[i].getStoreId() // might want this
+															// to be bannerID
+					+ " " + recieveStores[i].getStoreName());
+		}
+		return s;
+	}
+
+	public MenuItem quit = new MenuItem("Exit", 100, 1) {
 		public void run() {
 			if (Dialog.ask(Dialog.D_YES_NO, "Exit?") == 4) {
 				System.exit(0);
@@ -149,16 +182,17 @@ public class ProductScreen extends MainScreen {
 	/**
 	 * TODO remove on final release
 	 */
-    public MenuItem WebServiceTest = new MenuItem("WebService Test",100, 1) {
+	public MenuItem WebServiceTest = new MenuItem("WebService Test", 100, 1) {
 		public void run() {
-			//MyApp.app.popScreen(getScreen());
+			// MyApp.app.popScreen(getScreen());
 			MyApp.app.pushScreen(new WebServiceScreen());
 		}
-	};  
-	
+	};
+
 	/**
-	 * Creates a menu to select options.
-	 * TODO remove WebSerrivceTest on final release
+	 * Creates a menu to select options. TODO remove WebSerrivceTest on final
+	 * release
+	 * 
 	 * @author Mo, Warren Voelkl
 	 */
 	public void makeMenu(Menu menu, int instance) {
@@ -169,11 +203,12 @@ public class ProductScreen extends MainScreen {
 	}
 
 	public boolean onSavePrompt() {
-	    return true;
+		return true;
 	}
-	
+
 	/**
 	 * Sets the product files from a productInfo object.
+	 * 
 	 * @author Warren Voelkl
 	 */
 	private void setProductFields() {
