@@ -11,9 +11,7 @@ import net.rim.device.api.ui.component.ButtonField;
 import net.rim.device.api.ui.component.EditField;
 import net.rim.device.api.ui.component.LabelField;
 import net.rim.device.api.ui.component.PasswordEditField;
-import net.rim.device.api.ui.container.HorizontalFieldManager;
 import net.rim.device.api.ui.container.MainScreen;
-import net.rim.device.api.ui.container.VerticalFieldManager;
 
 public class LoginScreen extends MainScreen {
 	final int enterButton = 4;
@@ -25,8 +23,6 @@ public class LoginScreen extends MainScreen {
 		LabelField title = new LabelField("Login", LabelField.ELLIPSIS
 				| LabelField.USE_ALL_WIDTH);
 		setTitle(title);
-//		HorizontalFieldManager hfm = new HorizontalFieldManager(USE_ALL_HEIGHT | FIELD_VCENTER);
-//		VerticalFieldManager vfm = new VerticalFieldManager();
 		LoginFieldManager lfm = new LoginFieldManager(0);
 		FieldChangeListener buttonListener = new ButtonListener();
 		BitmapField logoField = new BitmapField(logo);
@@ -42,15 +38,6 @@ public class LoginScreen extends MainScreen {
 		lfm.add(passwd);
 		lfm.add(okButton);
 		add(lfm);
-//		vfm.add(logoField);
-//		vfm.add(new LabelField("Username:"));
-//		vfm.add(username);
-//		vfm.add(new LabelField("Password:"));
-//		vfm.add(passwd);
-//		vfm.add(okButton);
-//		hfm.add(vfm);
-//		//hfm.setPositionChild(vfm, 100, 100);
-//		add(hfm);
 	}
 
 	final class ButtonListener implements FieldChangeListener {

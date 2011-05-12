@@ -1,6 +1,5 @@
 package main.java.com.owfg.facade.bb.StoreManagement.gui;
 
-import main.java.com.owfg.facade.bb.StoreManagement.WebService.WebService;
 import main.java.com.owfg.facade.bb.StoreManagement.app.MyApp;
 
 import net.rim.device.api.ui.Field;

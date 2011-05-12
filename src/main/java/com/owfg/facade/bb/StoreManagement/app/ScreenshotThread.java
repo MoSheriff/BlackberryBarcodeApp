@@ -3,8 +3,6 @@ package main.java.com.owfg.facade.bb.StoreManagement.app;
 import java.util.Hashtable;
 import java.util.Vector;
 
-import javax.microedition.media.MediaException;
-
 import main.java.com.google.zxing.BarcodeFormat;
 import main.java.com.google.zxing.BinaryBitmap;
 import main.java.com.google.zxing.DecodeHintType;
