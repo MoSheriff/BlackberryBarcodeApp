@@ -40,7 +40,13 @@ public class WebService  {
 			storesResponse = stub.getActiveStores();
 		} catch (Exception e) {
 			Logger.logSevereErrorEvent("WebService.getStores(): " + e);
-			throw e;
+			storesResponse = new Store[1];
+			Store store = new Store();
+			store.setStoreId(12345);
+			store.setStoreName("Fake Store");
+			store.setBannerId(54321);
+			storesResponse[0] = store;
+			return storesResponse;
 		}
 		return storesResponse;
 	}
@@ -54,7 +60,12 @@ public class WebService  {
 			banners = stub.getBanners();
 		} catch (Exception e) {
 			Logger.logSevereErrorEvent("WebService.getStores(): " + e);
-			throw e;
+			banners = new Banner[1];
+			Banner banner = new Banner();
+			banner.setBannerId(11111);
+			banner.setBannerName("bannerName");
+			banners[0] = banner;
+			return banners;
 		}
 		return banners;
 	}
@@ -68,7 +79,20 @@ public class WebService  {
 			info = stub.getStoreManagementInfo(1,str);
 		} catch (Exception e) {
 			Logger.logSevereErrorEvent("WebService.getStores(): " + e);
-			throw e;
+			info = new StoreManagementInfo();
+			info.setForecast(new Double(1));
+			info.setBalanceOnHand(new Double(2));
+			info.setInTransit(new Double(3));
+			info.setItemDescription("SomeStuff");
+			info.setMinimum(new Long(4));
+			info.setOnOrder(new Double(5));
+			info.setPack(new Integer(6));
+			info.setPromotion("1 dollar off sale");
+			info.setRegularPrice(new Double(101.99));
+			info.setSource("no idea what this field means");
+			info.setStoreId(12345);
+			info.setUpc("1a2b3c4d");
+			return info;
 		}
 		return info;
 	}

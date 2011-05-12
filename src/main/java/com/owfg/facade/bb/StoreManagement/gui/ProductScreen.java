@@ -91,7 +91,15 @@ public class ProductScreen extends MainScreen {
 		}
 	};
 	
+    public MenuItem WebServiceTest = new MenuItem("WebService Test",100, 1) {
+		public void run() {
+			//MyApp.app.popScreen(getScreen());
+			MyApp.app.pushScreen(new WebServiceScreen());
+		}
+	};  
+	
 	public void makeMenu(Menu menu, int instance) {
+		menu.add(WebServiceTest);
 		menu.add(scan);
 		menu.add(submit);
 		menu.add(quit);

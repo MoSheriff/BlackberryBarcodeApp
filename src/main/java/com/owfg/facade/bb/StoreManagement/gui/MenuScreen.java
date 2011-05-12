@@ -1,6 +1,5 @@
 package main.java.com.owfg.facade.bb.StoreManagement.gui;
 
-import main.java.com.owfg.facade.bb.StoreManagement.WebService.WebService;
 import main.java.com.owfg.facade.bb.StoreManagement.app.MyApp;
 
 import net.rim.device.api.ui.Field;
@@ -92,7 +91,7 @@ public final class MenuScreen extends MainScreen {
 		menu.add(WeatherExample);
 	}
 	
-    public MenuItem WeatherExample = new MenuItem("WebService Example",100, 1) {
+    public MenuItem WeatherExample = new MenuItem("WebService Test",100, 1) {
 		public void run() {
 			//MyApp.app.popScreen(getScreen());
 			MyApp.app.pushScreen(new WebServiceScreen());
