@@ -1,5 +1,4 @@
 package main.java.com.owfg.facade.bb.StoreManagement.Logger;
-
 import main.java.com.owfg.facade.bb.StoreManagement.app.MyApp;
 
 import net.rim.device.api.system.EventLogger;
