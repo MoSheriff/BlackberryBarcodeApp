@@ -8,6 +8,10 @@ import main.java.com.owfg.facade.bb.StoreManagement.stub.StoreManagementInfo;
 import net.rim.device.api.ui.component.LabelField;
 import net.rim.device.api.ui.container.MainScreen;
 
+/**
+ * Test Screen to be removed before final release
+ * @author Waz
+ */
 public class WebServiceScreen extends MainScreen {
 	public WebServiceScreen() {
 		Store[] si = null;
@@ -23,7 +27,8 @@ public class WebServiceScreen extends MainScreen {
 			return;
 		}
 		for (int i = 0; i != si.length; ++i) {
-			add(new LabelField("Name: " + si[i].getStoreName() + " Id: " + si[i].getStoreId()));
+			add(new LabelField("Name: " + si[i].getStoreName() 
+					+ " Id: " + si[i].getStoreId()));
 		}
 		//testing banners
 		try {
@@ -34,9 +39,10 @@ public class WebServiceScreen extends MainScreen {
 		}
 		
 		for (int i = 0; i != banners.length; ++i) {
-			add(new LabelField("Banner: " + banners[i].getBannerName() + " Id: " + banners[i].getBannerId()));
+			add(new LabelField("Banner: " + banners[i].getBannerName() 
+					+ " Id: " + banners[i].getBannerId()));
 		}
-		//testing info
+		//testing info object
 		try {
 			productInfo = ws.getInfo("1234");
 		} catch (Exception e) {

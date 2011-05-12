@@ -1,9 +1,12 @@
 package main.java.com.owfg.facade.bb.StoreManagement.gui;
 
 import org.w3c.dom.events.Event;
+
+import main.java.com.owfg.facade.bb.StoreManagement.Logger.Logger;
 import main.java.com.owfg.facade.bb.StoreManagement.app.MyApp;
 import main.java.com.owfg.facade.bb.StoreManagement.app.ScreenshotThread;
 
+import net.rim.device.api.system.Application;
 import net.rim.device.api.ui.container.MainScreen;
 
 public final class CameraScreen extends MainScreen {
@@ -31,7 +34,7 @@ public final class CameraScreen extends MainScreen {
 							// before screenshots start being taken. Might only
 							// be a requirement in the simulator.
 			} catch (InterruptedException e) {
-				e.printStackTrace();
+				Logger.logSevereErrorEvent("CameraThread(): " + e);
 			}
 			imgTkr.run();
 			synchronized (MyApp.app.getEventLock()) {

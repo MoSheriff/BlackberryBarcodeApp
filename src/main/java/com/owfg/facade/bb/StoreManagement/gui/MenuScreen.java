@@ -16,6 +16,7 @@ import net.rim.device.api.ui.container.VerticalFieldManager;
 /**
  * A class extending the MainScreen class, which provides default standard
  * behavior for BlackBerry GUI applications.
+ * TODO remove before final release
  */
 public final class MenuScreen extends MainScreen {
 	public MenuScreen() {
@@ -91,7 +92,7 @@ public final class MenuScreen extends MainScreen {
 		menu.add(WeatherExample);
 	}
 	
-    public MenuItem WeatherExample = new MenuItem("WebService Example",100, 1) {
+    public MenuItem WeatherExample = new MenuItem("WebService Test",100, 1) {
 		public void run() {
 			//MyApp.app.popScreen(getScreen());
 			MyApp.app.pushScreen(new WebServiceScreen());
