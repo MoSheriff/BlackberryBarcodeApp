@@ -59,11 +59,11 @@ public class ProductScreen extends MainScreen {
 	
     public MenuItem scan = new MenuItem("Scan again", 100, 1) {
 		public void run() {
-			MyApp.cScreen.startThread();
 			synchronized (MyApp.getEventLock()) {
 				MyApp.app.popScreen(getScreen());
 				MyApp.app.pushScreen(MyApp.cScreen);
 			}
+			MyApp.cScreen.startThread();
 		}
 	};
 
