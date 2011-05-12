@@ -45,7 +45,7 @@
 			</plugin>
 
 			<plugin>
-                <groupId>main.java.com.pyx4me</groupId>
+                <groupId>com.pyx4me</groupId>
                 <artifactId>j2me-maven-plugin</artifactId>
                 <configuration>
                     <proguard>true</proguard>
