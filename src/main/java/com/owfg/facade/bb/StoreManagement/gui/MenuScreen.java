@@ -16,6 +16,7 @@ import net.rim.device.api.ui.container.VerticalFieldManager;
 /**
  * A class extending the MainScreen class, which provides default standard
  * behavior for BlackBerry GUI applications.
+ * TODO remove before final release
  */
 public final class MenuScreen extends MainScreen {
 	public MenuScreen() {

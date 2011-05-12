@@ -1,6 +1,8 @@
 package main.java.com.owfg.facade.bb.StoreManagement.gui;
 
 import org.w3c.dom.events.Event;
+
+import main.java.com.owfg.facade.bb.StoreManagement.Logger.Logger;
 import main.java.com.owfg.facade.bb.StoreManagement.app.MyApp;
 import main.java.com.owfg.facade.bb.StoreManagement.app.ScreenshotThread;
 
@@ -27,7 +29,7 @@ public final class CameraScreen extends MainScreen {
 			try {
 				sleep(500);
 			} catch (InterruptedException e) {
-				e.printStackTrace();
+				Logger.logSevereErrorEvent("CameraThread(): " + e);
 			}
 			imgTkr.run();
 			synchronized(MyApp.app.getEventLock()) {

@@ -3,8 +3,6 @@ package main.java.com.owfg.facade.bb.StoreManagement.app;
 import java.util.Hashtable;
 import java.util.Vector;
 
-import javax.microedition.media.MediaException;
-
 import main.java.com.google.zxing.BarcodeFormat;
 import main.java.com.google.zxing.BinaryBitmap;
 import main.java.com.google.zxing.DecodeHintType;
@@ -14,6 +12,7 @@ import main.java.com.google.zxing.ReaderException;
 import main.java.com.google.zxing.Result;
 import main.java.com.google.zxing.common.GlobalHistogramBinarizer;
 import main.java.com.google.zxing.oned.MultiFormatOneDReader;
+import main.java.com.owfg.facade.bb.StoreManagement.Logger.Logger;
 import net.rim.device.api.system.Bitmap;
 import net.rim.device.api.system.Display;
 
@@ -39,6 +38,7 @@ public class ScreenshotThread implements Runnable {
 			try {
 				result = reader.decode(bitmap1);
 			} catch (ReaderException e) {
+				Logger.logErrorEvent("ScreenshotThread.run(): " + e);
 				return;
 			}
 			if (result != null) {

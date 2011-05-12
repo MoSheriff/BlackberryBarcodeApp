@@ -7,11 +7,18 @@ import main.java.com.owfg.facade.bb.StoreManagement.stub.StoreManagementImpl_Stu
 import main.java.com.owfg.facade.bb.StoreManagement.stub.StoreManagementInfo;
 
 
-
+/**
+* Class which manages the web service.
+* <p>
+* The WebService uses the generated stub files then sets the
+* target server address in the stub classes from the properties file
+* (to be implemented)   
+*
+* @author Warren Voelkl
+**/
 public class WebService  {
 	private static StoreManagementImpl_Stub stub = null;
 	public WebService() {
-		Logger.logDebugEvent("WebService(): entered");
 		try {
 			if (stub == null) {
 				//here we should be parsing an external file to set the endpoint address
@@ -28,9 +35,18 @@ public class WebService  {
 			Logger.logSevereErrorEvent("WebService(): " + ex);
 			return;
 		}
-		Logger.logDebugEvent("WebService(): exit");
 	}
 	
+	/**
+	* Gets a list of the stores from server
+	* <p>
+	* Currently this function uses the stub to contact a server
+	* on a failure it will throw an exception currently this is
+	* disabled for testing purposes.
+	*
+	* @return a list of stores containing name, id and bannerId
+	* @author Warren Voelkl
+	**/
 	public Store[] getStores() throws Exception {
 		Store[] storesResponse = null;
 		if (stub == null) {
@@ -51,6 +67,16 @@ public class WebService  {
 		return storesResponse;
 	}
 	
+	/**
+	* Gets a list of the Banners from server
+	* <p>
+	* Currently this function uses the stub to contact a server
+	* on a failure it will throw an exception currently this is
+	* disabled for testing purposes.
+	*
+	* @return a list of store banners;
+	* @author Warren Voelkl
+	**/
 	public Banner[] getBanners() throws Exception {
 		Banner[] banners = null;
 		if (stub == null) {
@@ -70,6 +96,16 @@ public class WebService  {
 		return banners;
 	}
 	
+	/**
+	* Gets a list of the Banners from server
+	* <p>
+	* Currently this function uses the stub to contact a server
+	* on a failure it will throw an exception currently this exception
+	* returns bogus data for testing purposes.
+	* 
+	* @return the info object containing all information of an object
+	* @author Warren Voelkl
+	**/	
 	public StoreManagementInfo getInfo(String str) throws Exception {
 		StoreManagementInfo info = null;
 		if (stub == null) {
@@ -89,7 +125,7 @@ public class WebService  {
 			info.setPack(new Integer(6));
 			info.setPromotion("1 dollar off sale");
 			info.setRegularPrice(new Double(101.99));
-			info.setSource("no idea what this field means");
+			info.setSource("dfd ?");
 			info.setStoreId(12345);
 			info.setUpc("1a2b3c4d");
 			return info;

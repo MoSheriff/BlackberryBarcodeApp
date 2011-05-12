@@ -6,6 +6,7 @@ import javax.microedition.media.MediaException;
 import javax.microedition.media.Player;
 import javax.microedition.media.control.VideoControl;
 
+import main.java.com.owfg.facade.bb.StoreManagement.Logger.Logger;
 import main.java.com.owfg.facade.bb.StoreManagement.gui.CameraScreen;
 import main.java.com.owfg.facade.bb.StoreManagement.gui.LoginScreen;
 import net.rim.device.api.system.EventInjector;
@@ -64,11 +65,12 @@ public class MyApp extends UiApplication {
 			try {
 				cScreen.add(MyApp.viewFinder);
 			} catch (IllegalStateException ise) {
+				Logger.logErrorEvent("MyApp() IllegalStateException: " + ise);
 			}
 		} catch (IOException ioe) {
-			ioe.printStackTrace();
+			Logger.logErrorEvent("MyApp() IO Exception: " + ioe);
 		} catch (MediaException mee) {
-			mee.printStackTrace();
+			Logger.logErrorEvent("MyApp() Media Exception: " + mee);
 		}
 		synchronized(getEventLock()) {
 			pushScreen(new LoginScreen());
