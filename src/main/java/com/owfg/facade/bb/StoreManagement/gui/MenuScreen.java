@@ -19,7 +19,6 @@ import net.rim.device.api.ui.container.VerticalFieldManager;
  * behavior for BlackBerry GUI applications.
  */
 public final class MenuScreen extends MainScreen {
-	private static MyApp app;
 	public MenuScreen() {
 		super(DEFAULT_MENU | DEFAULT_CLOSE);
 
@@ -65,7 +64,7 @@ public final class MenuScreen extends MainScreen {
 			switch (field.getIndex()) {
 			case 0: // camera
 				MyApp.app.pushScreen(MyApp.cScreen);
-				MyApp.cScreen.startThread();
+				//MyApp.cScreen.startThread();
 				break;
 
 			case 1: // history
@@ -73,7 +72,7 @@ public final class MenuScreen extends MainScreen {
 				break;
 
 			case 2: // help
-				MyApp.app.pushScreen(new HelpScreen());
+				//MyApp.app.pushScreen(new ResultScreen());
 				break;
 
 			case 3: // quit

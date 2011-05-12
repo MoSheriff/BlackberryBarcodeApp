@@ -1,12 +1,14 @@
 package main.java.com.owfg.facade.bb.StoreManagement.gui;
 
+import org.w3c.dom.events.Event;
+import main.java.com.owfg.facade.bb.StoreManagement.app.MyApp;
 import main.java.com.owfg.facade.bb.StoreManagement.app.ScreenshotThread;
 
 import net.rim.device.api.ui.container.MainScreen;
 
 public final class CameraScreen extends MainScreen {
 	CameraThread cThread;
-
+	Event barcodeScanned;
 	public CameraScreen() {
 	}
 	
@@ -25,10 +27,13 @@ public final class CameraScreen extends MainScreen {
 			try {
 				sleep(500);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			imgTkr.run();
+			synchronized(MyApp.app.getEventLock()) {
+				MyApp.app.popScreen(getScreen());
+				MyApp.app.pushScreen(new ProductScreen());
+			}
 			return;
 		}
 	}

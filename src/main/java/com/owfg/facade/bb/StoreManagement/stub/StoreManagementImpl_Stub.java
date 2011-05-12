@@ -161,11 +161,11 @@ public class StoreManagementImpl_Stub implements main.java.com.owfg.facade.bb.St
 		return result;
 	}
 
-	public main.java.com.owfg.facade.bb.StoreManagement.stub.StoreManagementInfo getStoreManagementInfo(long arg0, java.lang.String arg1) throws java.rmi.RemoteException {
+	public main.java.com.owfg.facade.bb.StoreManagement.stub.StoreManagementInfo getStoreManagementInfo(long storeId, java.lang.String upc) throws java.rmi.RemoteException {
 		// Copy the incoming values into an Object array if needed.
 		Object[] inputObject = new Object[2];
-		inputObject[0] = new java.lang.Long(arg0);
-		inputObject[1] = arg1;
+		inputObject[0] = new java.lang.Long(storeId);
+		inputObject[1] = upc;
 
 		Operation op = Operation.newInstance(_qname_getStoreManagementInfo, _type_getStoreManagementInfo, _type_getStoreManagementInfoResponse);
 		_prepOperation(op);
@@ -188,50 +188,50 @@ public class StoreManagementImpl_Stub implements main.java.com.owfg.facade.bb.St
 			result = null;
 		} else {
 			result = new main.java.com.owfg.facade.bb.StoreManagement.stub.StoreManagementInfo();
-			double a_double;
+			java.lang.Double _double;
 			Object balanceOnHandObj = _returnObj[0];
-			a_double = ((java.lang.Double)balanceOnHandObj).doubleValue();
-			result.setBalanceOnHand(a_double);
-			double a_double2;
+			_double = (java.lang.Double)balanceOnHandObj;
+			result.setBalanceOnHand(_double);
+			java.lang.Double _double2;
 			Object forecastObj = _returnObj[1];
-			a_double2 = ((java.lang.Double)forecastObj).doubleValue();
-			result.setForecast(a_double2);
-			double a_double3;
+			_double2 = (java.lang.Double)forecastObj;
+			result.setForecast(_double2);
+			java.lang.Double _double3;
 			Object inTransitObj = _returnObj[2];
-			a_double3 = ((java.lang.Double)inTransitObj).doubleValue();
-			result.setInTransit(a_double3);
+			_double3 = (java.lang.Double)inTransitObj;
+			result.setInTransit(_double3);
 			java.lang.String string;
 			Object itemDescriptionObj = _returnObj[3];
 			string = (java.lang.String)itemDescriptionObj;
 			result.setItemDescription(string);
-			long a_long;
+			java.lang.Long _long;
 			Object minimumObj = _returnObj[4];
-			a_long = ((java.lang.Long)minimumObj).longValue();
-			result.setMinimum(a_long);
-			double a_double4;
+			_long = (java.lang.Long)minimumObj;
+			result.setMinimum(_long);
+			java.lang.Double _double4;
 			Object onOrderObj = _returnObj[5];
-			a_double4 = ((java.lang.Double)onOrderObj).doubleValue();
-			result.setOnOrder(a_double4);
-			int a_int;
+			_double4 = (java.lang.Double)onOrderObj;
+			result.setOnOrder(_double4);
+			java.lang.Integer integer;
 			Object packObj = _returnObj[6];
-			a_int = ((java.lang.Integer)packObj).intValue();
-			result.setPack(a_int);
+			integer = (java.lang.Integer)packObj;
+			result.setPack(integer);
 			java.lang.String string2;
 			Object promotionObj = _returnObj[7];
 			string2 = (java.lang.String)promotionObj;
 			result.setPromotion(string2);
-			double a_double5;
+			java.lang.Double _double5;
 			Object regularPriceObj = _returnObj[8];
-			a_double5 = ((java.lang.Double)regularPriceObj).doubleValue();
-			result.setRegularPrice(a_double5);
+			_double5 = (java.lang.Double)regularPriceObj;
+			result.setRegularPrice(_double5);
 			java.lang.String string3;
 			Object sourceObj = _returnObj[9];
 			string3 = (java.lang.String)sourceObj;
 			result.setSource(string3);
-			long a_long2;
+			long a_long;
 			Object storeIdObj = _returnObj[10];
-			a_long2 = ((java.lang.Long)storeIdObj).longValue();
-			result.setStoreId(a_long2);
+			a_long = ((java.lang.Long)storeIdObj).longValue();
+			result.setStoreId(a_long);
 			java.lang.String string4;
 			Object upcObj = _returnObj[11];
 			string4 = (java.lang.String)upcObj;
@@ -243,8 +243,6 @@ public class StoreManagementImpl_Stub implements main.java.com.owfg.facade.bb.St
 	//  End user methods
 	// 
 
-	protected static final QName _qname_arg0 = new QName("", "arg0");
-	protected static final QName _qname_arg1 = new QName("", "arg1");
 	protected static final QName _qname_balanceOnHand = new QName("", "balanceOnHand");
 	protected static final QName _qname_bannerId = new QName("", "bannerId");
 	protected static final QName _qname_bannerName = new QName("", "bannerName");
@@ -313,38 +311,34 @@ public class StoreManagementImpl_Stub implements main.java.com.owfg.facade.bb.St
 		_complexType_getBannersResponse.elements = new Element[1];
 		_complexType_getBannersResponse.elements[0] = _type_return2;
 		_type_getBannersResponse = new Element(_qname_getBannersResponse, _complexType_getBannersResponse);
-		Element _type_arg0;
-		_type_arg0 = new Element(_qname_arg0, Type.LONG);
-		Element _type_arg1;
-		_type_arg1 = new Element(_qname_arg1, Type.STRING, 0, 1, false);
+		Element _type_upc;
+		_type_upc = new Element(_qname_upc, Type.STRING, 0, 1, false);
 		ComplexType _complexType_getStoreManagementInfo;
 		_complexType_getStoreManagementInfo = new ComplexType();
 		_complexType_getStoreManagementInfo.elements = new Element[2];
-		_complexType_getStoreManagementInfo.elements[0] = _type_arg0;
-		_complexType_getStoreManagementInfo.elements[1] = _type_arg1;
+		_complexType_getStoreManagementInfo.elements[0] = _type_storeId;
+		_complexType_getStoreManagementInfo.elements[1] = _type_upc;
 		_type_getStoreManagementInfo = new Element(_qname_getStoreManagementInfo, _complexType_getStoreManagementInfo);
 		Element _type_balanceOnHand;
-		_type_balanceOnHand = new Element(_qname_balanceOnHand, Type.DOUBLE);
+		_type_balanceOnHand = new Element(_qname_balanceOnHand, Type.DOUBLE, 0, 1, false);
 		Element _type_forecast;
-		_type_forecast = new Element(_qname_forecast, Type.DOUBLE);
+		_type_forecast = new Element(_qname_forecast, Type.DOUBLE, 0, 1, false);
 		Element _type_inTransit;
-		_type_inTransit = new Element(_qname_inTransit, Type.DOUBLE);
+		_type_inTransit = new Element(_qname_inTransit, Type.DOUBLE, 0, 1, false);
 		Element _type_itemDescription;
 		_type_itemDescription = new Element(_qname_itemDescription, Type.STRING, 0, 1, false);
 		Element _type_minimum;
-		_type_minimum = new Element(_qname_minimum, Type.LONG);
+		_type_minimum = new Element(_qname_minimum, Type.LONG, 0, 1, false);
 		Element _type_onOrder;
-		_type_onOrder = new Element(_qname_onOrder, Type.DOUBLE);
+		_type_onOrder = new Element(_qname_onOrder, Type.DOUBLE, 0, 1, false);
 		Element _type_pack;
-		_type_pack = new Element(_qname_pack, Type.INT);
+		_type_pack = new Element(_qname_pack, Type.INT, 0, 1, false);
 		Element _type_promotion;
 		_type_promotion = new Element(_qname_promotion, Type.STRING, 0, 1, false);
 		Element _type_regularPrice;
-		_type_regularPrice = new Element(_qname_regularPrice, Type.DOUBLE);
+		_type_regularPrice = new Element(_qname_regularPrice, Type.DOUBLE, 0, 1, false);
 		Element _type_source;
 		_type_source = new Element(_qname_source, Type.STRING, 0, 1, false);
-		Element _type_upc;
-		_type_upc = new Element(_qname_upc, Type.STRING, 0, 1, false);
 		ComplexType _complexType_storeManagementInfo;
 		_complexType_storeManagementInfo = new ComplexType();
 		_complexType_storeManagementInfo.elements = new Element[12];

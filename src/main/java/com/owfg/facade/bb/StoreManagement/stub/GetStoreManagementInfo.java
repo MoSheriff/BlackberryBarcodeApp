@@ -6,30 +6,30 @@ package main.java.com.owfg.facade.bb.StoreManagement.stub;
 
 
 public class GetStoreManagementInfo {
-    protected long arg0;
-    protected java.lang.String arg1;
+    protected long storeId;
+    protected java.lang.String upc;
     
     public GetStoreManagementInfo() {
     }
     
-    public GetStoreManagementInfo(long arg0, java.lang.String arg1) {
-        this.arg0 = arg0;
-        this.arg1 = arg1;
+    public GetStoreManagementInfo(long storeId, java.lang.String upc) {
+        this.storeId = storeId;
+        this.upc = upc;
     }
     
-    public long getArg0() {
-        return arg0;
+    public long getStoreId() {
+        return storeId;
     }
     
-    public void setArg0(long arg0) {
-        this.arg0 = arg0;
+    public void setStoreId(long storeId) {
+        this.storeId = storeId;
     }
     
-    public java.lang.String getArg1() {
-        return arg1;
+    public java.lang.String getUpc() {
+        return upc;
     }
     
-    public void setArg1(java.lang.String arg1) {
-        this.arg1 = arg1;
+    public void setUpc(java.lang.String upc) {
+        this.upc = upc;
     }
 }

@@ -6,15 +6,15 @@ package main.java.com.owfg.facade.bb.StoreManagement.stub;
 
 
 public class StoreManagementInfo {
-    protected double balanceOnHand;
-    protected double forecast;
-    protected double inTransit;
+    protected java.lang.Double balanceOnHand;
+    protected java.lang.Double forecast;
+    protected java.lang.Double inTransit;
     protected java.lang.String itemDescription;
-    protected long minimum;
-    protected double onOrder;
-    protected int pack;
+    protected java.lang.Long minimum;
+    protected java.lang.Double onOrder;
+    protected java.lang.Integer pack;
     protected java.lang.String promotion;
-    protected double regularPrice;
+    protected java.lang.Double regularPrice;
     protected java.lang.String source;
     protected long storeId;
     protected java.lang.String upc;
@@ -22,7 +22,7 @@ public class StoreManagementInfo {
     public StoreManagementInfo() {
     }
     
-    public StoreManagementInfo(double balanceOnHand, double forecast, double inTransit, java.lang.String itemDescription, long minimum, double onOrder, int pack, java.lang.String promotion, double regularPrice, java.lang.String source, long storeId, java.lang.String upc) {
+    public StoreManagementInfo(java.lang.Double balanceOnHand, java.lang.Double forecast, java.lang.Double inTransit, java.lang.String itemDescription, java.lang.Long minimum, java.lang.Double onOrder, java.lang.Integer pack, java.lang.String promotion, java.lang.Double regularPrice, java.lang.String source, long storeId, java.lang.String upc) {
         this.balanceOnHand = balanceOnHand;
         this.forecast = forecast;
         this.inTransit = inTransit;
@@ -37,27 +37,27 @@ public class StoreManagementInfo {
         this.upc = upc;
     }
     
-    public double getBalanceOnHand() {
+    public java.lang.Double getBalanceOnHand() {
         return balanceOnHand;
     }
     
-    public void setBalanceOnHand(double balanceOnHand) {
+    public void setBalanceOnHand(java.lang.Double balanceOnHand) {
         this.balanceOnHand = balanceOnHand;
     }
     
-    public double getForecast() {
+    public java.lang.Double getForecast() {
         return forecast;
     }
     
-    public void setForecast(double forecast) {
+    public void setForecast(java.lang.Double forecast) {
         this.forecast = forecast;
     }
     
-    public double getInTransit() {
+    public java.lang.Double getInTransit() {
         return inTransit;
     }
     
-    public void setInTransit(double inTransit) {
+    public void setInTransit(java.lang.Double inTransit) {
         this.inTransit = inTransit;
     }
     
@@ -69,27 +69,27 @@ public class StoreManagementInfo {
         this.itemDescription = itemDescription;
     }
     
-    public long getMinimum() {
+    public java.lang.Long getMinimum() {
         return minimum;
     }
     
-    public void setMinimum(long minimum) {
+    public void setMinimum(java.lang.Long minimum) {
         this.minimum = minimum;
     }
     
-    public double getOnOrder() {
+    public java.lang.Double getOnOrder() {
         return onOrder;
     }
     
-    public void setOnOrder(double onOrder) {
+    public void setOnOrder(java.lang.Double onOrder) {
         this.onOrder = onOrder;
     }
     
-    public int getPack() {
+    public java.lang.Integer getPack() {
         return pack;
     }
     
-    public void setPack(int pack) {
+    public void setPack(java.lang.Integer pack) {
         this.pack = pack;
     }
     
@@ -101,11 +101,11 @@ public class StoreManagementInfo {
         this.promotion = promotion;
     }
     
-    public double getRegularPrice() {
+    public java.lang.Double getRegularPrice() {
         return regularPrice;
     }
     
-    public void setRegularPrice(double regularPrice) {
+    public void setRegularPrice(java.lang.Double regularPrice) {
         this.regularPrice = regularPrice;
     }
     

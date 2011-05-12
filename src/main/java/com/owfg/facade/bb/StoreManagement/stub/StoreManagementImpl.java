@@ -9,6 +9,6 @@ public interface StoreManagementImpl extends java.rmi.Remote {
 
 	public main.java.com.owfg.facade.bb.StoreManagement.stub.Banner[] getBanners() throws java.rmi.RemoteException;
 
-	public main.java.com.owfg.facade.bb.StoreManagement.stub.StoreManagementInfo getStoreManagementInfo(long arg0, java.lang.String arg1) throws java.rmi.RemoteException;
+	public main.java.com.owfg.facade.bb.StoreManagement.stub.StoreManagementInfo getStoreManagementInfo(long storeId, java.lang.String upc) throws java.rmi.RemoteException;
 
 }
