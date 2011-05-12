@@ -14,9 +14,7 @@ import main.java.com.google.zxing.ReaderException;
 import main.java.com.google.zxing.Result;
 import main.java.com.google.zxing.common.GlobalHistogramBinarizer;
 import main.java.com.google.zxing.oned.MultiFormatOneDReader;
-import main.java.com.owfg.facade.bb.StoreManagement.gui.ResultScreen;
 import net.rim.device.api.system.Bitmap;
-import net.rim.device.api.system.Characters;
 import net.rim.device.api.system.Display;
 
 public class ScreenshotThread implements Runnable {
@@ -45,11 +43,9 @@ public class ScreenshotThread implements Runnable {
 			}
 			if (result != null) {
 				String resultText = result.getText();
-				// MyApp.keyDownUp(Characters.ESCAPE);
 				try {
 					MyApp.player.stop();
 				} catch (MediaException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				return;

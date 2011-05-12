@@ -7,9 +7,7 @@ import javax.microedition.media.Player;
 import javax.microedition.media.control.VideoControl;
 
 import main.java.com.owfg.facade.bb.StoreManagement.gui.CameraScreen;
-import main.java.com.owfg.facade.bb.StoreManagement.gui.MenuScreen;
-import main.java.com.owfg.facade.bb.StoreManagement.gui.ResultScreen;
-
+import main.java.com.owfg.facade.bb.StoreManagement.gui.LoginScreen;
 import net.rim.device.api.system.EventInjector;
 import net.rim.device.api.system.EventLogger;
 import net.rim.device.api.ui.Field;
@@ -28,7 +26,8 @@ public class MyApp extends UiApplication {
 	public static Player player;
 	public static final long GUID = 0x2051fd67b72d11L;
 	public static final String APP_NAME = "OWFGScanner";
-	
+	public Object lock = new Object();
+
 	/**
 	 * Entry point for application
 	 * 
@@ -40,17 +39,19 @@ public class MyApp extends UiApplication {
 	public static void main(String[] args) {
 		app = new MyApp();
 		app.enterEventDispatcher();
-		EventLogger.register(MyApp.GUID, MyApp.APP_NAME, EventLogger.VIEWER_STRING);
+		EventLogger.register(MyApp.GUID, MyApp.APP_NAME,
+				EventLogger.VIEWER_STRING);
 	}
 
 	/**
 	 * Creates a new MyApp object
 	 */
 	public MyApp() {
-		//MenuScreen screen = new MenuScreen();
+		// MenuScreen screen = new MenuScreen();
 		cScreen = new CameraScreen();
-		//pushScreen(screen);
-		
+		// barcodeEventListener = new BarcodeEventListener();
+		// pushScreen(screen);
+
 		try {
 			player = Manager.createPlayer("capture://video");
 			player.realize();
@@ -69,14 +70,15 @@ public class MyApp extends UiApplication {
 		} catch (MediaException mee) {
 			mee.printStackTrace();
 		}
-		pushScreen(MyApp.cScreen);
-		cScreen.startThread();
+		synchronized(getEventLock()) {
+			pushScreen(new LoginScreen());
+		}
 	}
 
 	/**
 	 * Simulates a single keypress (push and release)
 	 */
-	static void keyDownUp(char character) {
+	public static void keyDownUp(char character) {
 		EventInjector.invokeEvent(new EventInjector.KeyEvent(
 				EventInjector.KeyEvent.KEY_DOWN, character, 0));
 		EventInjector.invokeEvent(new EventInjector.KeyEvent(
