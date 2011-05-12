@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   	<modelVersion>4.0.0</modelVersion>
-  	<groupId>com.owfg.facade.bb.StoreManagement</groupId>
+  	<groupId>main.java.com.owfg.facade.bb.StoreManagement</groupId>
   	<artifactId>gui</artifactId>
   	<version>1.0</version>
 	<name>BlackberryBarcodeApp</name>
@@ -45,7 +45,7 @@
 			</plugin>
 
 			<plugin>
-                <groupId>com.pyx4me</groupId>
+                <groupId>main.java.com.pyx4me</groupId>
                 <artifactId>j2me-maven-plugin</artifactId>
                 <configuration>
                     <proguard>true</proguard>
