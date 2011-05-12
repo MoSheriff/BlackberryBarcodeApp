@@ -37,7 +37,7 @@ public class ScreenshotThread implements Runnable {
 			try {
 				result = reader.decode(bitmap1);
 			} catch (ReaderException e) {
-				return;
+				continue;
 			}
 			if (result != null) {
 				MyApp.resultText = result.getText();

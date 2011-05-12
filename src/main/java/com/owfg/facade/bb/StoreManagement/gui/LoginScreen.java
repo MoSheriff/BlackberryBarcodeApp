@@ -27,14 +27,12 @@ public class LoginScreen extends MainScreen {
 		FieldChangeListener buttonListener = new ButtonListener();
 		BitmapField logoField = new BitmapField(logo);
 
-		EditField username = new EditField();
-		PasswordEditField passwd = new PasswordEditField();
+		EditField username = new EditField("Username:","", 20, 0);
+		PasswordEditField passwd = new PasswordEditField("Password:","", 20, 0);
 		okButton = new ButtonField("Enter", ButtonField.CONSUME_CLICK);
 		okButton.setChangeListener(buttonListener);
 		lfm.add(logoField);
-		lfm.add(new LabelField("Username:"));
 		lfm.add(username);
-		lfm.add(new LabelField("Password:"));
 		lfm.add(passwd);
 		lfm.add(okButton);
 		add(lfm);
