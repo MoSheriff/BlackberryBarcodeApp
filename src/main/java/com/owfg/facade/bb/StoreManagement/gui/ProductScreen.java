@@ -17,6 +17,7 @@ public class ProductScreen extends MainScreen {
 	
 	public ProductScreen() {
 		super();
+		MyApp.resultText = "";
 		VerticalFieldManager vfm = new VerticalFieldManager(USE_ALL_WIDTH);
 		
 		//Fields for a form
