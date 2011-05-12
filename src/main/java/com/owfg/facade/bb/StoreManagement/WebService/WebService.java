@@ -7,7 +7,6 @@ import main.java.com.owfg.facade.bb.StoreManagement.stub.Banner;
 import main.java.com.owfg.facade.bb.StoreManagement.stub.Store;
 import main.java.com.owfg.facade.bb.StoreManagement.stub.StoreManagementImpl_Stub;
 import main.java.com.owfg.facade.bb.StoreManagement.stub.StoreManagementInfo;
-import main.java.com.owfg.facade.bb.StoreManagement.WebService.StoreInfo;
 
 
 
@@ -19,8 +18,7 @@ public class WebService  {
 			if (stub == null) {
 				stub = new StoreManagementImpl_Stub();
 				stub._setProperty(StoreManagementImpl_Stub.ENDPOINT_ADDRESS_PROPERTY,
-						//"http://warrenv.dlinkddns.com:8080");
-						"http://localhost:8088/mockStoreManagementImpIBinding");
+						"http://warrenv.dlinkddns.com:8080");
 				if (stub == null) {
 					Logger.logErrorEvent("stub null after fetching it");
 				} else {
