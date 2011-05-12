@@ -19,7 +19,7 @@ import net.rim.device.api.system.Display;
 public class ScreenshotThread implements Runnable {
 
 	public void run() {
-		Result result;
+		Result result = null;
 		Reader reader;
 		Hashtable hints = new Hashtable(1);
 		Vector readerHints = new Vector(4);
@@ -38,8 +38,8 @@ public class ScreenshotThread implements Runnable {
 			try {
 				result = reader.decode(bitmap1);
 			} catch (ReaderException e) {
-				Logger.logErrorEvent("ScreenshotThread.run(): " + e);
-				return;
+				Logger.logDebugEvent("ScreenshotThread.run(): " + e);
+				//return;
 			}
 			if (result != null) {
 				MyApp.resultText = result.getText();

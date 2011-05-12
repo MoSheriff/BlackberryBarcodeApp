@@ -6,6 +6,7 @@ import main.java.com.owfg.facade.bb.StoreManagement.Logger.Logger;
 import main.java.com.owfg.facade.bb.StoreManagement.app.MyApp;
 import main.java.com.owfg.facade.bb.StoreManagement.app.ScreenshotThread;
 
+import net.rim.device.api.system.Application;
 import net.rim.device.api.ui.container.MainScreen;
 
 public final class CameraScreen extends MainScreen {

@@ -5,6 +5,7 @@ import main.java.com.owfg.facade.bb.StoreManagement.WebService.WebService;
 import main.java.com.owfg.facade.bb.StoreManagement.app.MyApp;
 import main.java.com.owfg.facade.bb.StoreManagement.stub.Store;
 import main.java.com.owfg.facade.bb.StoreManagement.stub.StoreManagementInfo;
+import net.rim.device.api.system.Display;
 import net.rim.device.api.ui.*;
 import net.rim.device.api.ui.component.*;
 import net.rim.device.api.ui.container.*;
@@ -33,11 +34,11 @@ public class ProductScreen extends MainScreen {
 
 		// Fields for a form
 		VerticalFieldManager form = new VerticalFieldManager(FIELD_HCENTER);
-		form.setMargin(10, 50, 10, 50);
+		form.setMargin(10, 20, 10, 20);
 		EditField upcField = new EditField("UPC: ", upc, maxUPCLength,
 				FIELD_LEFT);
 		form.add(upcField);
-		form.add(new ObjectChoiceField("Store: ", getStores(), 0));
+		form.add(new ObjectChoiceField("Store: ", WebServiceActiveStores(), 0));
 		vfm.add(form);
 
 		productName = new LabelField("", LabelField.ELLIPSIS | FIELD_HCENTER);
@@ -72,8 +73,8 @@ public class ProductScreen extends MainScreen {
 				| READONLY);
 		grid.add(source);
 
-		grid.setColumnPadding(100);
-		grid.setRowPadding(10);
+		grid.setColumnPadding(Display.getWidth() / 3);
+		grid.setRowPadding(Display.getHeight() / 24);
 		vfm.add(grid);
 		add(vfm);
 	}
@@ -134,9 +135,11 @@ public class ProductScreen extends MainScreen {
 			ws = new WebService();
 		}
 		try {
-			// TODO dialog box on fail
 			productInfo = ws.getInfo(upc);
 		} catch (Exception e) {
+			synchronized(MyApp.app.getEventLock()) {
+				Dialog.inform("Failed to contact WebService");
+			}
 			Logger.logSevereErrorEvent("WebserviceRecieveInfoByUPC(): " + e);
 			return false;
 		}
@@ -146,11 +149,10 @@ public class ProductScreen extends MainScreen {
 
 	/**
 	 * Gets a list of stores from server
-	 * TODO popup dialog and return null string on failure
 	 * @return a list of stores 
 	 */
-	private String[] getStores() {
-		String[] s = null;// s =
+	private String[] WebServiceActiveStores() {
+		String[] s = null;
 		Store[] recieveStores = null;
 		if (ws == null) {
 			ws = new WebService();
@@ -158,7 +160,9 @@ public class ProductScreen extends MainScreen {
 		try {
 			recieveStores = ws.getStores();
 		} catch (Exception e) {
-			// TODO Dialog.something(Dialog.D_YES_NO, "Exit?") == 4
+			synchronized(MyApp.app.getEventLock()) {
+				Dialog.inform("Failed to contact WebService");
+			}
 			Logger.logErrorEvent("ProductScreen.getStores(): " + e);
 			String[] fail = { "918 Fleetwood", "930 Maple Ridge" };
 			return fail;

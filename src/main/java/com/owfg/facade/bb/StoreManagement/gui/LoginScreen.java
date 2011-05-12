@@ -3,6 +3,7 @@ package main.java.com.owfg.facade.bb.StoreManagement.gui;
 import javax.microedition.lcdui.Image;
 
 import main.java.com.owfg.facade.bb.StoreManagement.app.MyApp;
+import net.rim.device.api.system.Application;
 import net.rim.device.api.system.Bitmap;
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.FieldChangeListener;
@@ -44,7 +45,7 @@ public class LoginScreen extends MainScreen {
 		public void fieldChanged(Field field, int context) {
 			if (field.equals(okButton)) {
 				MyApp.cScreen.startThread();
-				synchronized (MyApp.app.getEventLock()) {
+				synchronized (Application.getEventLock()) {
 					MyApp.app.popScreen(getScreen());
 					MyApp.app.pushScreen(MyApp.cScreen);
 				}

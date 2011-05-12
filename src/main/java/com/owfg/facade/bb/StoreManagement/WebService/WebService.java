@@ -56,6 +56,7 @@ public class WebService  {
 			storesResponse = stub.getActiveStores();
 		} catch (Exception e) {
 			Logger.logSevereErrorEvent("WebService.getStores(): " + e);
+			//throw e;
 			storesResponse = new Store[1];
 			Store store = new Store();
 			store.setStoreId(12345);
@@ -86,6 +87,7 @@ public class WebService  {
 			banners = stub.getBanners();
 		} catch (Exception e) {
 			Logger.logSevereErrorEvent("WebService.getStores(): " + e);
+			//throw e;
 			banners = new Banner[1];
 			Banner banner = new Banner();
 			banner.setBannerId(11111);
@@ -115,6 +117,7 @@ public class WebService  {
 			info = stub.getStoreManagementInfo(1,str);
 		} catch (Exception e) {
 			Logger.logSevereErrorEvent("WebService.getStores(): " + e);
+			//throw e;
 			info = new StoreManagementInfo();
 			info.setForecast(new Double(1));
 			info.setBalanceOnHand(new Double(2));
