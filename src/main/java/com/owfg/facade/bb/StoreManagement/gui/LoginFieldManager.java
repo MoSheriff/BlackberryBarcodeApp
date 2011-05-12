@@ -10,6 +10,11 @@ public class LoginFieldManager extends Manager {
 	final int passwordText = 3;
 	final int passwordEditField  = 4;
 	final int okButton = 5;
+	
+	final int offsetXOne = 60;
+	final int offsetXTwo = 148;
+	final int offsetYOne = 80;
+	final int offsetYtwo = 110;
 
 	protected LoginFieldManager(long style) {
 		super(style);
@@ -22,24 +27,24 @@ public class LoginFieldManager extends Manager {
 		setPositionChild(field, 120, 0); // set the position for the field
 		layoutChild(field, width, height);
 
-		field = getField(usernameText); // get the field
-		setPositionChild(field, 60, 80); // set the position for the field
+		field = getField(usernameText);
+		setPositionChild(field, offsetXOne, offsetYOne);
 		layoutChild(field, width, height);
 		
-		field = getField(usernameEditField); // get the field
-		setPositionChild(field, 148, 80); // set the position for the field
+		field = getField(usernameEditField);
+		setPositionChild(field, offsetXTwo, offsetYOne);
 		layoutChild(field, width, height);
 		
-		field = getField(passwordText); // get the field
-		setPositionChild(field, 60, 110); // set the position for the field
+		field = getField(passwordText);
+		setPositionChild(field, offsetXOne, offsetYtwo);
 		layoutChild(field, width, height);
 		
-		field = getField(passwordEditField); // get the field
-		setPositionChild(field, 142, 110); // set the position for the field
+		field = getField(passwordEditField);
+		setPositionChild(field, offsetXTwo, offsetYtwo);
 		layoutChild(field, width, height);
 		
-		field = getField(okButton); // get the field
-		setPositionChild(field, 120, 140); // set the position for the field
+		field = getField(okButton);
+		setPositionChild(field, 120, 140);
 		layoutChild(field, width, height);
 		
 		setExtent(width, height);
