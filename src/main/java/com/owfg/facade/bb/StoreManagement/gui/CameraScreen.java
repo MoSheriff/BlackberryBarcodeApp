@@ -9,28 +9,32 @@ import net.rim.device.api.ui.container.MainScreen;
 public final class CameraScreen extends MainScreen {
 	CameraThread cThread;
 	Event barcodeScanned;
+
 	public CameraScreen() {
 	}
-	
+
 	public void startThread() {
 		cThread = new CameraThread();
 		cThread.start();
 	}
-	
-	class CameraThread extends Thread {	
+
+	class CameraThread extends Thread {
 		Runnable imgTkr;
+
 		CameraThread() {
 		}
-		
+
 		public void run() {
 			imgTkr = new ScreenshotThread();
 			try {
-				sleep(500);
+				sleep(500); // required to properly initialize the camerascreen
+							// before screenshots start being taken. Might only
+							// be a requirement in the simulator.
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 			imgTkr.run();
-			synchronized(MyApp.app.getEventLock()) {
+			synchronized (MyApp.app.getEventLock()) {
 				MyApp.app.popScreen(getScreen());
 				MyApp.app.pushScreen(new ProductScreen());
 			}

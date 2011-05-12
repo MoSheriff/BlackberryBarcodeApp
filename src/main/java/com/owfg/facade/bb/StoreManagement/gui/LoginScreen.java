@@ -43,11 +43,11 @@ public class LoginScreen extends MainScreen {
 	final class ButtonListener implements FieldChangeListener {
 		public void fieldChanged(Field field, int context) {
 			if (field.equals(okButton)) {
-				MyApp.cScreen.startThread();
 				synchronized (MyApp.app.getEventLock()) {
 					MyApp.app.popScreen(getScreen());
 					MyApp.app.pushScreen(MyApp.cScreen);
 				}
+				MyApp.cScreen.startThread();
 			}
 		}
 	}
