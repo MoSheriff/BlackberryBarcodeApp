@@ -32,7 +32,7 @@ public final class CameraScreen extends MainScreen {
 			imgTkr.run();
 			synchronized(MyApp.app.getEventLock()) {
 				MyApp.app.popScreen(getScreen());
-				MyApp.app.pushScreen(new ResultScreen());
+				MyApp.app.pushScreen(new ProductScreen());
 			}
 			return;
 		}
