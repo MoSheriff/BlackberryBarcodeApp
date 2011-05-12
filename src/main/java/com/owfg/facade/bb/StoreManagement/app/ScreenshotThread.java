@@ -42,7 +42,7 @@ public class ScreenshotThread implements Runnable {
 				return;
 			}
 			if (result != null) {
-				String resultText = result.getText();
+				MyApp.resultText = result.getText();
 				try {
 					MyApp.player.stop();
 				} catch (MediaException e) {

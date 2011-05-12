@@ -23,6 +23,7 @@ public class MyApp extends UiApplication {
 	static Field viewFinder;
 	public static CameraScreen cScreen;
 	static VideoControl vc;
+	public static String resultText;
 
 	public static Player player;
 	public static final long GUID = 0x2051fd67b72d11L;

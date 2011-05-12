@@ -4,12 +4,11 @@ import main.java.com.owfg.facade.bb.StoreManagement.app.MyApp;
 import net.rim.device.api.ui.*;
 import net.rim.device.api.ui.component.*;
 import net.rim.device.api.ui.container.*;
-import net.rim.device.api.util.StringProvider;
 
 public class ProductScreen extends MainScreen {
 	private final int resultRows = 4;
 	private final int resultCols = 2;
-	private String upc = "01234567890";
+	private String upc = MyApp.resultText;
 	private final int maxUPCLength = 20;
 	private final int resultBoxLength = 7;
 	private String[] stores = {"918 Fleetwood", "930 Maple Ridge"};
