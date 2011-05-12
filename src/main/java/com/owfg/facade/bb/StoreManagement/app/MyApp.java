@@ -12,6 +12,7 @@ import net.rim.device.api.system.EventInjector;
 import net.rim.device.api.system.EventLogger;
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.UiApplication;
+import net.rim.device.api.ui.component.LabelField;
 
 /**
  * This class extends the UiApplication class, providing a graphical user
@@ -23,8 +24,8 @@ public class MyApp extends UiApplication {
 	static Field viewFinder;
 	public static CameraScreen cScreen;
 	static VideoControl vc;
-	public static final long GUID = 0x2051fd67b72d11L;
-	public static final String APP_NAME = "OWFGScanner";
+	public static final long GUID = 0x9c3cd62e3320b498L;
+	public static final String APP_NAME = "BarcodeScanner";
 	
 	/**
 	 * Entry point for application
@@ -37,17 +38,29 @@ public class MyApp extends UiApplication {
 	public static void main(String[] args) {
 		app = new MyApp();
 		app.enterEventDispatcher();
-		EventLogger.register(MyApp.GUID, MyApp.APP_NAME, EventLogger.VIEWER_STRING);
+		/*
+		if (EventLogger.register(MyApp.GUID, MyApp.APP_NAME, EventLogger.VIEWER_STRING)) {
+	        //MyApp.app.getActiveScreen().add(new LabelField("Logger enabled: " + "GUID=" + GUID + ", name=" + MyApp.APP_NAME));
+	    } else {
+	    	MyApp.app.getActiveScreen().add(new LabelField("Logger failed: " + "GUID=" + GUID + ", name=" + MyApp.APP_NAME));
+	    }
+	    */
 	}
 
 	/**
 	 * Creates a new MyApp object
+	 * @throws Throwable 
 	 */
 	public MyApp() {
 		Player player;
 		MenuScreen screen = new MenuScreen();
 		cScreen = new CameraScreen();
 		pushScreen(screen);
+		if (EventLogger.register(MyApp.GUID, MyApp.APP_NAME, EventLogger.VIEWER_STRING)) {
+	        //getActiveScreen().add(new LabelField("Logger enabled: " + "GUID=" + GUID + ", name=" + MyApp.APP_NAME));
+	    } else {
+	    	getActiveScreen().add(new LabelField("Logger failed: " + "GUID=" + GUID + ", name=" + MyApp.APP_NAME));
+	    }
 		try {
 			player = Manager.createPlayer("capture://video");
 			player.realize();
