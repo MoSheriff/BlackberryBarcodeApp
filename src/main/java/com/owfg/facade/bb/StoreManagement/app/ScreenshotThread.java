@@ -43,11 +43,6 @@ public class ScreenshotThread implements Runnable {
 			}
 			if (result != null) {
 				MyApp.resultText = result.getText();
-				try {
-					MyApp.player.stop();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
 				return;
 			} else {
 				continue;
