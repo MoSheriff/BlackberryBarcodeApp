@@ -48,7 +48,6 @@ public class MyApp extends UiApplication {
 	 * @throws Throwable 
 	 */
 	public MyApp() {
-		// MenuScreen screen = new MenuScreen();
 		cScreen = new CameraScreen();
 		if (EventLogger.register(MyApp.GUID, MyApp.APP_NAME, EventLogger.VIEWER_STRING)) {
 	        //getActiveScreen().add(new LabelField("Logger enabled: " + "GUID=" + GUID + ", name=" + MyApp.APP_NAME));
