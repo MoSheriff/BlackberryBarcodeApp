@@ -28,8 +28,8 @@ public class LoginScreen extends MainScreen {
 		FieldChangeListener buttonListener = new ButtonListener();
 		BitmapField logoField = new BitmapField(logo);
 
-		EditField username = new EditField("Username:","", 20, 0);
-		PasswordEditField passwd = new PasswordEditField("Password:","", 20, 0);
+		EditField username = new EditField("Username:","", 10, 0);
+		PasswordEditField passwd = new PasswordEditField("Password:","", 10, 0);
 		okButton = new ButtonField("Enter", ButtonField.CONSUME_CLICK);
 		okButton.setChangeListener(buttonListener);
 		lfm.add(logoField);

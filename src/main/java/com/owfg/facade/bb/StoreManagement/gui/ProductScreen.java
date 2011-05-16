@@ -1,10 +1,9 @@
 package main.java.com.owfg.facade.bb.StoreManagement.gui;
 
 import main.java.com.owfg.facade.bb.StoreManagement.Logger.Logger;
+import main.java.com.owfg.facade.bb.StoreManagement.WebService.ProductInfo;
 import main.java.com.owfg.facade.bb.StoreManagement.WebService.WebService;
 import main.java.com.owfg.facade.bb.StoreManagement.app.MyApp;
-import main.java.com.owfg.facade.bb.StoreManagement.stub.Store;
-import main.java.com.owfg.facade.bb.StoreManagement.stub.StoreManagementInfo;
 import net.rim.device.api.system.Display;
 import net.rim.device.api.ui.*;
 import net.rim.device.api.ui.component.*;
@@ -19,7 +18,7 @@ public class ProductScreen extends MainScreen {
 	private final int resultBoxLength = 7;
 	private LabelField productName;
 	private EditField boh, onOrder, min, inTransit, fcst, pack, reg, source;
-	private StoreManagementInfo productInfo;
+	private ProductInfo productInfo;
 
 	/**
 	 * Constructor for the product screen Sets the layout of all the different
@@ -130,7 +129,7 @@ public class ProductScreen extends MainScreen {
 	 * @author Warren Voelkl
 	 */
 	public boolean WebserviceRecieveInfoByUPC() {
-
+		//ProductInfo info = null;
 		if (ws == null) {
 			ws = new WebService();
 		}
@@ -152,28 +151,24 @@ public class ProductScreen extends MainScreen {
 	 * @return a list of stores 
 	 */
 	private String[] WebServiceActiveStores() {
-		String[] s = null;
-		Store[] recieveStores = null;
+		String[] str = null;
 		if (ws == null) {
 			ws = new WebService();
 		}
 		try {
-			recieveStores = ws.getStores();
+			str = ws.getStores();
 		} catch (Exception e) {
 			synchronized(MyApp.app.getEventLock()) {
 				Dialog.inform("Failed to contact WebService");
 			}
 			Logger.logErrorEvent("ProductScreen.getStores(): " + e);
-			String[] fail = { "918 Fleetwood", "930 Maple Ridge" };
-			return fail;
+			//TODO sort this out
+			str = new String[1];
+			String blank = new String("");
+			str[0] = blank;
+			return str;
 		}
-		s = new String[recieveStores.length];
-		for (int i = 0; i != recieveStores.length; i++) {
-			s[i] = new String(recieveStores[i].getStoreId() // might want this
-															// to be bannerID
-					+ " " + recieveStores[i].getStoreName());
-		}
-		return s;
+		return str;
 	}
 
 	public MenuItem quit = new MenuItem("Exit", 100, 1) {
@@ -216,14 +211,17 @@ public class ProductScreen extends MainScreen {
 	 * @author Warren Voelkl
 	 */
 	private void setProductFields() {
-		productName.setText(productInfo.getItemDescription());
-		boh.setText(productInfo.getBalanceOnHand().toString());
-		onOrder.setText(productInfo.getOnOrder().toString());
-		min.setText(productInfo.getMinimum().toString());
-		inTransit.setText(productInfo.getInTransit().toString());
-		fcst.setText(productInfo.getForecast().toString());
-		pack.setText(productInfo.getPack().toString());
-		reg.setText(productInfo.getRegularPrice().toString());
-		source.setText(productInfo.getSource().toString());
+		if (productInfo == null) {
+			return; //maybe display error screen?
+		}
+		productName.setText(productInfo.itemDesc);
+		boh.setText(productInfo.boh);
+		onOrder.setText(productInfo.onOrder);
+		min.setText(productInfo.min);
+		inTransit.setText(productInfo.inTransit);
+		fcst.setText(productInfo.forcast);
+		pack.setText(productInfo.pack);
+		reg.setText(productInfo.regularPrice);
+		source.setText(productInfo.source);
 	}
 }

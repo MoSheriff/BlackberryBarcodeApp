@@ -35,7 +35,8 @@ public class LoginFieldManager extends Manager {
 //		layoutChild(field, width, height);
 		
 		field = getField(usernameEditField);
-		setPositionChild(field, (Display.getWidth()/2 - field.getPreferredWidth()/2), offsetYOne);
+		fieldWidth = field.getPreferredWidth()/2;
+		setPositionChild(field, Display.getWidth()/4, Display.getHeight()/3);
 		layoutChild(field, width, height);
 		
 //		field = getField(passwordText);
@@ -43,11 +44,11 @@ public class LoginFieldManager extends Manager {
 //		layoutChild(field, width, height);
 		
 		field = getField(passwordEditField);
-		setPositionChild(field, offsetXTwo, offsetYtwo);
+		setPositionChild(field, Display.getWidth()/4, Display.getHeight()/3 + field.getPreferredHeight() );
 		layoutChild(field, width, height);
 		
 		field = getField(okButton);
-		setPositionChild(field, 120, 140);
+		setPositionChild(field, Display.getWidth()/2 - field.getPreferredWidth(), Display.getHeight()/3 + field.getPreferredHeight()*2);
 		layoutChild(field, width, height);
 		
 		setExtent(width, height);

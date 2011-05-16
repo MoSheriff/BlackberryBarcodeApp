@@ -20,7 +20,7 @@ public class WebServiceScreen extends MainScreen {
 		
 		WebService ws = new WebService();
 		//testing get store ID
-		try {
+		/*try {
 			si = ws.getStores();
 		} catch (Exception e) {
 			Logger.logErrorEvent("WebServiceScreen() getStores(): " + e);
@@ -30,7 +30,9 @@ public class WebServiceScreen extends MainScreen {
 			add(new LabelField("Name: " + si[i].getStoreName() 
 					+ " Id: " + si[i].getStoreId()));
 		}
+		*/
 		//testing banners
+		/*
 		try {
 			banners = ws.getBanners();
 		} catch (Exception e) {
@@ -51,6 +53,7 @@ public class WebServiceScreen extends MainScreen {
 		}
 		add(new LabelField("Product Desc: " + productInfo.getItemDescription()));
 		add(new LabelField("Product Price: " + productInfo.getRegularPrice()));
+		*/
 	}
 
 }

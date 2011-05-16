@@ -23,8 +23,13 @@ public class WebService  {
 			if (stub == null) {
 				//here we should be parsing an external file to set the endpoint address
 				stub = new StoreManagementImpl_Stub();
+				//just setting to https is enough to make in encrypted
 				stub._setProperty(StoreManagementImpl_Stub.ENDPOINT_ADDRESS_PROPERTY,
-						"http://warrenv.dlinkddns.com:8080");
+						"https://warrenv.dlinkddns.com/StoreManagement-ws");
+				//and this should make it basic auth
+				//this should be taking the "test" strings from login screen
+				stub._setProperty(StoreManagementImpl_Stub.USERNAME_PROPERTY, "test");
+				stub._setProperty(StoreManagementImpl_Stub.PASSWORD_PROPERTY, "test");
 				if (stub == null) {
 					Logger.logErrorEvent("stub null after fetching it");
 				} else {
@@ -47,8 +52,9 @@ public class WebService  {
 	* @return a list of stores containing name, id and bannerId
 	* @author Warren Voelkl
 	**/
-	public Store[] getStores() throws Exception {
+	public String[] getStores() throws Exception {
 		Store[] storesResponse = null;
+		String[] str = null;
 		if (stub == null) {
 			throw new Exception("Null Pointer Exception");
 		}		
@@ -56,16 +62,15 @@ public class WebService  {
 			storesResponse = stub.getActiveStores();
 		} catch (Exception e) {
 			Logger.logSevereErrorEvent("WebService.getStores(): " + e);
-			//throw e;
-			storesResponse = new Store[1];
-			Store store = new Store();
-			store.setStoreId(12345);
-			store.setStoreName("Fake Store");
-			store.setBannerId(54321);
-			storesResponse[0] = store;
-			return storesResponse;
+			throw e;
 		}
-		return storesResponse;
+		str = new String[storesResponse.length];
+		for (int i = 0; i != storesResponse.length; i++) {
+			str[i] = new String(storesResponse[i].getStoreId() + " " 
+					+ ((storesResponse[i].getStoreName() == null) 
+							? "" : storesResponse[i].getStoreName()));
+		}	
+		return str;
 	}
 	
 	/**
@@ -78,8 +83,9 @@ public class WebService  {
 	* @return a list of store banners;
 	* @author Warren Voelkl
 	**/
-	public Banner[] getBanners() throws Exception {
+	public String[] getBanners() throws Exception {
 		Banner[] banners = null;
+		String[] str = null;
 		if (stub == null) {
 			throw new Exception("Null Pointer Exception");
 		}
@@ -87,15 +93,15 @@ public class WebService  {
 			banners = stub.getBanners();
 		} catch (Exception e) {
 			Logger.logSevereErrorEvent("WebService.getStores(): " + e);
-			//throw e;
-			banners = new Banner[1];
-			Banner banner = new Banner();
-			banner.setBannerId(11111);
-			banner.setBannerName("bannerName");
-			banners[0] = banner;
-			return banners;
+			throw e;
 		}
-		return banners;
+		str = new String[banners.length];
+		for (int i = 0; i != banners.length; i++) {
+			str[i] = new String(banners[i].getBannerId() + " " 
+					+ ((banners[i].getBannerName() == null) 
+							? "" : banners[i].getBannerName()));
+		}	
+		return str;
 	}
 	
 	/**
@@ -108,7 +114,7 @@ public class WebService  {
 	* @return the info object containing all information of an object
 	* @author Warren Voelkl
 	**/	
-	public StoreManagementInfo getInfo(String str) throws Exception {
+	public ProductInfo getInfo(String str) throws Exception {
 		StoreManagementInfo info = null;
 		if (stub == null) {
 			throw new Exception("Null Pointer Exception");
@@ -117,22 +123,9 @@ public class WebService  {
 			info = stub.getStoreManagementInfo(1,str);
 		} catch (Exception e) {
 			Logger.logSevereErrorEvent("WebService.getStores(): " + e);
-			//throw e;
-			info = new StoreManagementInfo();
-			info.setForecast(new Double(1));
-			info.setBalanceOnHand(new Double(2));
-			info.setInTransit(new Double(3));
-			info.setItemDescription("SomeStuff");
-			info.setMinimum(new Long(4));
-			info.setOnOrder(new Double(5));
-			info.setPack(new Integer(6));
-			info.setPromotion("1 dollar off sale");
-			info.setRegularPrice(new Double(101.99));
-			info.setSource("dfd ?");
-			info.setStoreId(12345);
-			info.setUpc("1a2b3c4d");
-			return info;
+			throw e;
 		}
-		return info;
+		return new ProductInfo(info);
 	}
+	
 }
